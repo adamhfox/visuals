@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Coat Clone (Tailwind CSS) | Office Relocation</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- main script -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body class="font-sans text-zinc-950" x-data="{ openMenu : false }"
+    :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+    <header>
+        <section
+            class="site-nav relative z-40 bg-white text-base lg:fixed lg:inset-x-0 lg:grid lg:shadow-md xl:text-[15px]">
+            <!-- mobile menu -->
+            <div class="container relative flex max-w-none items-center justify-between py-4 xl:hidden">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <!-- mobile button -->
+                <button class="hamburger z-60 grid h-10 w-10 place-content-center rounded-full bg-white"
+                    @click="openMenu = !openMenu">
+                    <svg width="24" height="16" fill="currentColor" class="hamburger-open">
+                        <title>open menu</title>
+                        <g fill-rule="evenodd">
+                            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                        </g>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" class="hamburger-close hidden">
+                        <title>close menu</title>
+                        <path
+                            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="fixed inset-0 grid justify-items-end bg-zinc-950/10 xl:visible xl:relative xl:col-span-full xl:row-span-full xl:flex xl:bg-transparent"
+                :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                <div class="py-6.5 relative z-20 flex h-screen w-4/5 flex-col items-center bg-white transition-all xl:container sm:w-1/2 xl:h-auto xl:w-auto xl:translate-x-0 xl:flex-row xl:bg-transparent"
+                    :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+                    <a href="/index.html" class="hidden xl:block">
+                        <img src="/images/logo.png" alt="Red Coat" class="w-44 xl:w-auto" />
+                    </a>
+                    <nav class="w-4/5 xl:w-full">
+                        <ul
+                            class="mt-9 flex w-full flex-col justify-between gap-y-4 xl:ml-12 xl:mt-0 xl:flex-row xl:items-center">
+                            <li>
+                                <a href="/managed-it.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Managed IT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/it-consulting.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    IT Consulting
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/office-relocation.html"
+                                    class="block rounded-2xl bg-red-100 px-4 duration-200 hover:bg-red-100">
+                                    Office Relocation
+                                </a>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>CyberSecurity</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cybersecurity.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Webroot</a>
+                                    </li>
+                                    <li>
+                                        <a href="/antivirus-intrusion-prevention.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Antivirus &
+                                            Intrusion Prevention</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ransomware.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Ransomware</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>Migration Services</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cloud-migration-services.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Cloud Migration
+                                            Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/office-365-migration.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Office 365
+                                            Migration Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/about-us.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-col whitespace-nowrap pt-2 lg:ml-auto lg:mt-0 xl:hidden">
+                            <a href="/contact-us.html"
+                                class="btn-primary px-6 py-4 font-bold md:max-w-xs lg:px-3 lg:py-3.5 xl:px-7 xl:py-9">Contact
+                                Us</a>
+                        </div>
+                    </nav>
+                </div>
+                <div
+                    class="mt-4 hidden w-3/5 flex-col whitespace-nowrap border-t border-zinc-200 pt-4 xl:ml-auto xl:mt-0 xl:flex xl:w-auto xl:flex-row xl:border-none xl:pt-0">
+                    <a href="/contact-us.html"
+                        class="btn-primary px-6 py-4 font-bold md:max-w-xs xl:px-11 xl:py-9">Contact Us</a>
+                </div>
+                <!-- close -->
+                <button class="close-screen absolute inset-0 lg:hidden" @click="openMenu = !openMenu"></button>
+            </div>
+        </section>
+    </header>
+
+    <main class="relative z-30 bg-white pb-20">
+        <section class="grid h-full">
+            <video autoplay muted loop id="" class="inset-0 h-full w-full object-cover xl:mt-12">
+                <source src="/videos/office-relocation.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+
+        <section class="container relative z-40">
+            <article class="prose mx-auto mt-20 sm:prose-h2:text-5xl sm:prose-h3:text-3xl">
+                <p>
+                    We have extensive experience in office relocation. Whether you’re
+                    moving to a larger space in the same building or across town, we’re
+                    here to make the move as painless as possible.
+                </p>
+
+                <h2>Have Seamless IT Support With Your Office Relocation</h2>
+
+                <p>
+                    Moving to a new location can be a significant source of stress for
+                    many people, but it does not have to be. When you partner with
+                    Visual Network Solutions Technology Group Inc. to provide IT support throughout your
+                    office relocation, you can trust that your technology transition is
+                    in good hands. Our current clients have called on us multiple times
+                    because of how well their previous relocation went. A commercial
+                    move is also a perfect opportunity for you to start your new
+                    partnership with Visual Network Solutions.
+                </p>
+
+                <p>
+                    We can design and structure your new services, help you move in, and
+                    be there to maintain your technology in the coming years. One of the
+                    most essential things to remember about the moving process for us is
+                    that this is not just about moving things like office furniture or
+                    file cabinets. You can hire a moving company for that. Instead, it’s
+                    about moving your IT network, getting everything set up again, and
+                    making certain that your technology is back in place as quickly as
+                    possible. We know that for every day your team is unable to access
+                    all of your files and applications is a day where you’re not as
+                    productive as you should be. You’re losing profits every day you
+                    work like this. That’s why commercial office relocation is a process
+                    that takes planning and precise execution to complete properly.
+                </p>
+
+                <h2>Do I Need IT Support During A Relocation?</h2>
+
+                <p>
+                    Moving your business isn’t something you want to do on a whim or
+                    without fully thinking it through. There are a number of reasons a
+                    relocation could be a bad idea, no matter how near or far. However,
+                    there are many reasons why relocating may make perfect sense for
+                    your company at this time. Knowing when it’s the latter instead of
+                    the former is one of the things that makes a great business leader.
+                </p>
+
+                <p>
+                    The biggest reason companies relocate is because they’ve outgrown
+                    their current office space. You may find that you need to hire more
+                    employees but don’t have offices for them. You may be out of room to
+                    store products or for new equipment you need to work more
+                    efficiently. Another reason is that it’s time to upgrade. If you’re
+                    still in the building where you started your business, it may no
+                    longer be the perfect fit for you. There can be a number of reasons
+                    why this is the case, but the main issue is that it’s time to move
+                    to a building that meets your new needs, not the needs you had when
+                    you first started your business.
+                </p>
+
+                <h2>IT Issues to Consider When Relocating</h2>
+
+                <p>
+                    When you’re moving into a new office, you want your new space to be
+                    ready to handle all of your IT needs. We will assist you with all of
+                    your IT considerations so that your new space meets your current and
+                    future technology needs.
+                </p>
+
+                <p>
+                    <strong>Cabling –</strong> If you have a good number of computers
+                    and other devices that need to be hard-wired into your network, you
+                    may need to have additional ethernet cabling running through the new
+                    space. If you’re moving into a large building that has a number of
+                    floors, you may meet to have structured cabling ran to
+                    telecommunications enclosures on each floor and backbone cabling ran
+                    between those enclosures and the main equipment room. Our IT Support
+                    Technicians help provide planning as well as installation in your
+                    office relocation.
+                </p>
+
+                <p>
+                    <strong>WiFi deployment –</strong> Preparing a building for WiFi
+                    requires more planning than simply placing a few wireless network
+                    extenders and routers here and there. We will look at the size of
+                    each floor and take into consideration anything that could impede
+                    your WiFi signal, including walls and other electrical
+                    installations. Then we will carefully plan out a series of WiFi
+                    equipment to create a blanket of signal that covers the entire
+                    space. Our goal is to make certain you don’t have any spots where
+                    wireless connectivity drops or becomes significantly weaker than in
+                    other parts of the building.
+                </p>
+
+                <p>
+                    <strong>VoIP –</strong> If you’re going to use primarily VoIP for
+                    your phones, you will need to have a Cat5 ethernet connection near
+                    each location where you will have a phone. VoIP phones cannot use
+                    standard phone jacks or cable, although you can use one connection
+                    for both your phone and your VoIP handset by connecting the two.
+                </p>
+
+                <p>
+                    <strong>Video Conferencing Equipment –</strong> You may need
+                    additional cables and equipment installed in any conference room
+                    where you plan to do video conferencing. These conference rooms may
+                    need video screens, projectors, microphones, speakers, and other
+                    equipment. Even if you don’t plan on doing video conferencing, you
+                    may still want to have your conference rooms equipped with the
+                    capability in case you need it in the future.
+                </p>
+
+                <p>
+                    <strong>Server Rooms –</strong> During a relocation, planning out
+                    exactly where your servers, telecommunications enclosures, and your
+                    equipment room isn’t something you should evert leave to chance.
+                    Everything needs to take into account location in the building, the
+                    amount of cabling that will need to be run, the location of where
+                    the internet connection from the utility company is located, and
+                    other factors. Having the proper IT support team is critical for
+                    making these decisions wisely. We carefully work with your team to
+                    determine the best locations for these rooms so that your IT
+                    infrastructure is thoughtfully considered.
+                </p>
+
+                <p>
+                    <strong>Power Outlets –</strong> If you’re moving into an older
+                    building, you may be surprised by its lack of power outlets. Today,
+                    offices have a lot of equipment that needs to be plugged in,
+                    including computers, monitors, printers, servers, routers, backup
+                    drives, and much more. Using too many power strips could lead to
+                    overloading the circuits and other issues. Part of our IT support
+                    during your relocation is to assess power requirements and determine
+                    if the building’s existing infrastructure can meet those needs. It’s
+                    possible an experienced electrician will need to come in and do a
+                    partial or full rewire of the space.
+                </p>
+
+                <p>
+                    <strong>Cooling Requirements –</strong> If you have a larger server
+                    room, it’s going to get very hot in there very quickly. Servers put
+                    out a lot of heat, so these rooms are going to need to be cooled to
+                    the correct temperature and remain at that temperature. Otherwise,
+                    your servers may overheat. We will evaluate your planned server
+                    setup and the building’s HVAC system to determine if it’s adequate
+                    or if you’ll need to upgrade it.
+                </p>
+
+                <h2>IT Support While Expanding Your Current Space</h2>
+
+                <p>
+                    If you’re expanding into more of your current floor or if you’re
+                    moving into additional floors in the same building, you need to take
+                    into consideration your current infrastructure and if it’s really
+                    sufficient to handle the increased load. In most cases, it’s simply
+                    not. You may need additional telecommunications enclosures, more
+                    ethernet connections, additional WiFi repeaters, and other support
+                    structures in order to expand yet still have the same network access
+                    and quality.
+                </p>
+
+                <p>
+                    Expanding can require as much work as moving into a new space,
+                    especially if the area you’re expanding into hasn’t been wired for
+                    use as an office. This is why having the proper IT support and
+                    during any phase of office transition is so vital for your business.
+                    You may have to run a good amount of network cable before you can
+                    begin using that space, but it’s always best to do so before you
+                    move into it. It may be tempting to immediately spread out, but talk
+                    to us first so we can help you plan out the best way to expand
+                    without losing any of your networking capabilities.
+                </p>
+
+                <p>
+                    ​Naturally, just as there are reasons why you should move, there are
+                    also reasons why you shouldn’t relocate. If your business isn’t
+                    stable financially or if your industry is going through a rough
+                    patch, it can be a risk. You need to take time and look over your
+                    business’s current state as well as the overall industry’s state and
+                    the economy before making the decision to relocate. However, if you
+                    do decide that now is the right time to relocate, we’re here to make
+                    that move go as easily and as smoothly as possible.
+                </p>
+
+                <h2>IT Support During A Relocation Is Less Stressful</h2>
+
+                <p>
+                    Visual Network Solutions will be there to make sure you hit the ground running. We
+                    know that moving to a new location can be the first step in growing
+                    your business. You may be expanding the space of your office or
+                    manufacturing facility, allowing you to take on more customers or
+                    produce more products quickly. You could be moving into a new market
+                    that you feel will provide a better foundation from which to expand.
+                    You could simply be moving to a newer building or one with better
+                    rental fees. No matter what the reason, we want to make sure you can
+                    focus on the excitement that the new location brings and not worry
+                    about the little annoyances or problems that often come up in a
+                    commercial move.
+                </p>
+
+                <p>
+                    When you move to a new location, there are many different
+                    opportunities you can take advantage of. Here are a few different
+                    reasons why moving locations can be so exciting:
+                </p>
+
+                <p>
+                    <strong>You have more space –</strong> You can expand your office,
+                    adding additional workstations, conference rooms, storage, or any
+                    other area you need. This is one of the reasons why you need to
+                    carefully consider the location you’re moving to. You want to make
+                    certain you can expand to meet the needs you’ll have for the next
+                    five to ten years rather than your immediate needs. Otherwise, you
+                    may find yourself needing to relocate again in just a few years.
+                    This is vital to growing your business, especially if you know you
+                    will need to hire additional employees soon and may need to do so
+                    again in a few years.
+                </p>
+
+                <p>
+                    <strong>Find new customers –</strong> Moving to a new location can
+                    mean moving into an area with more potential customers. This can be
+                    especially true with companies that deal in sales, whether it’s
+                    retail products or services. A new location may better fit your
+                    potential audience. You may also be moving out of an area that was a
+                    detriment to your business, whether it’s due to a lack of traffic, a
+                    high crime rate, or any other issue.
+                </p>
+
+                <p>
+                    <strong>Save money –</strong> A new location may come with lower
+                    rent or lower utility costs. This can be a great chance to reduce
+                    your operating costs. Don’t base your decision on the rent alone,
+                    though, since there are other factors to consider. For example,
+                    moving into a larger space may come with a higher rent, but if it’s
+                    a new building, you may have lower utility costs thanks to better
+                    insulation and an energy-efficient HVAC.
+                </p>
+
+                <p>
+                    <strong>Move for other amenities –</strong> In some cases, you may
+                    want to move not because you gain more space but because you can
+                    expand in other ways. For example, you may want to move to a
+                    location that has better parking or that is closer to your major
+                    clients. Better access to major highways, a port, or the airport can
+                    also benefit your business. Ideally, of course, you’ll move to a
+                    location that has these amenities, is the right size, and helps you
+                    reduce your monthly operating costs.
+                </p>
+
+                <p>
+                    <strong>The building is newer –</strong> Working out of an older
+                    building not only impacts your monthly utility cost, but it can also
+                    affect your technology. Older buildings have older wiring that may
+                    not support your needs. This can result in either working without
+                    all of the equipment you need or spending money to update the
+                    building’s wiring and cable. Newer buildings, especially when you
+                    have the chance to do any upgrades before you move in, don’t have
+                    this issue. Newer buildings may also come with a reduced insurance
+                    rate, too.
+                </p>
+
+                <p>
+                    <strong>Payless taxes –</strong> It’s possible you may be able to
+                    move just a short distance yet fall into a new location with lower
+                    taxes. Changing counties or cities can put you in an area with a
+                    different sales tax. Keep this in mind when considering where you
+                    want to relocate your business.
+                </p>
+
+                <p>
+                    <strong>Raise operating capital –</strong> If you’re relocating into
+                    a rental space and selling the property you’re currently using, the
+                    cash you receive from that sale can give you the operating capital
+                    you need to expand, reduce your debt, or use for other needs.
+                </p>
+
+                <h2>IT Support During A Office Relocation Is Less Challenging</h2>
+
+                <p>
+                    Transitioning your internet/phone services and making sure emergency
+                    services are up-to-date are, in fact, two of the toughest hurdles to
+                    clear. Your new office space might need new access points or an
+                    entirely different cabling structure. This is where our experience
+                    becomes your biggest asset. We want to manage your transition with
+                    no disruption to your operations and no downtime in your services.
+                    The goal is for you to move into your new building and immediately
+                    be able to begin working again with as little downtime as possible.
+                </p>
+
+                <p>
+                    If you take advantage of our other services, this can actually make
+                    your relocation even easier. When Visual Network Solutions is already managing your
+                    data backup, disaster recovery, and VoIP phone systems, moving them
+                    to a new location will be much more straightforward. We will be able
+                    to quickly set up your hardware, connect it to the cloud, restore
+                    your network security, and have your calls directed to the correct
+                    handset. We prefer to have 6 to 88 to 12 weeks of relocation
+                    planning time to engineer and structure your move, but we have been
+                    able to perform a move in less time in the past largely depending on
+                    the ability to get outside vendors (cabling, electricians, and
+                    Internet Services Providers) to complete installations in the time
+                    frame required.
+                </p>
+
+                <p>
+                    Why work with us instead of letting a moving less experienced
+                    company move your technology or doing it yourself? We understand how
+                    to pack up your technology, move it and set up your equipment
+                    without damaging it. Thanks to our experience with IT, we know the
+                    best way to set up an office. We’ll work with you to determine the
+                    right layout for your new IT center and make certain that you have
+                    everything needed. We can even recommend additional hardware and
+                    other items that will help improve productivity and that can be
+                    installed and set up now so you don’t have to disrupt your daily
+                    business later.
+                </p>
+
+                <p>
+                    Obviously, the more time we have for your move, the easier your
+                    transition will be. We want to help you create the perfect new
+                    location for your business where you have the space and resources
+                    needed to grow. Our service area for office relocation reaches
+                    beyond our home office in downtown Dallas. We also serve
+                    clients in Dallas County, Orange County, Ventura County, and
+                    San Bernardino County.
+                </p>
+
+                <h2>IT Support Is Critical For A Successful Relocation</h2>
+
+                <p>
+                    One of the advantages that you will get by partnering with Visual Network Solutions
+                    to handle your IT Support during a relocation over other commercial
+                    moving services is our eye for improvement. There might have been
+                    limitations in your old location or services that would have been
+                    too expensive to deploy in an established space. Your move will be
+                    the perfect opportunity to implement new services and hardware. We
+                    want to hear all of your IT needs and what problems you’ve had in
+                    your current location to determine if we can eliminate those issues
+                    in your new space.
+                </p>
+
+                <h2>IT Support Exposes Risks</h2>
+
+                <p>
+                    We will assess your new space and recommend the best methods and
+                    practices for your future. This may involve installing new access
+                    points, rewiring running new network cables in parts or all of the
+                    building, or even creating new spaces by taking down or putting up
+                    walls helping the architect and you decide where to put up walls and
+                    run proper electrical connections. For example, if you have a number
+                    of servers that are always running, now is the perfect time to
+                    engineer a room with correct cooling systems for your heat output.
+                    We can help you calculate this and select the properly sized HVAC
+                    system to meet your needs. stems won’t crash during periods of
+                    extreme heat.
+                </p>
+
+                <p>
+                    Moving offices is about more than just packing up your furniture and
+                    office equipment. It’s also about thinking about the future of your
+                    business rather than the placement of your furniture and equipment.
+                    You don’t move locations often, so why not take the time to fully
+                    set up your new office in the best way possible? For Visual Network Solutions, a
+                    full-service move means looking at the ways your business operates
+                    and the ways we can improve your services.
+                </p>
+
+                <p>
+                    Office relocation with us is the perfect time to enhance your
+                    systems and set you up for a brighter future. Don’t move in and then
+                    try to upgrade the building as you go or when you need it later. We
+                    will work with you to upgrade everything now, so even though you may
+                    not need all of the extra cabling or access points we add today, it
+                    will be there tomorrow when you do.
+                </p>
+
+                <p>
+                    Let us work with you to create the perfect layout, make certain all
+                    of the cabling and wiring is where it should be, and maximize your
+                    overall use of the space. <a href="/contact-us">Contact us</a> today
+                    to discuss our office relocation services.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="relative z-40 border-t border-zinc-100 bg-white py-12 text-sm">
+        <div class="container grid gap-x-4 gap-y-8 sm:gap-x-8 lg:flex lg:justify-between">
+            <section class="col-span-full row-start-1 flex flex-col items-start gap-y-4 sm:col-span-1">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <small class="text-sm">&copy; 2023 by Visual Network Solutions</small>
+            </section>
+
+            <section class="col-span-full row-start-2 space-y-4 sm:col-span-1 sm:row-start-1">
+                <h5>CONTACT</h5>
+                <address class="not-italic">
+                    <ul class="space-y-1">
+                        <li>Phone: <a href="tel:+ (210) 233-9880"> (210) 233-9880</a></li>
+                        <li>
+                            Email:
+                            <a href="mailto: vnssupport@visolutions.net"> vnssupport@visolutions.net</a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+
+            <section class="col-start-1 row-start-3 space-y-4 sm:row-start-2">
+                <h5>WORKING HOURS</h5>
+                <ul class="space-y-1">
+                    <li>Mon - Fri: 8am - 8pm</li>
+                    <li>Saturday: 9am - 7pm</li>
+                    <li>Sunday: 9am - 5pm</li>
+                </ul>
+
+                <ul class="space-y-1">
+                    <li>NOC</li>
+                    <li>24 Hours</li>
+                </ul>
+            </section>
+
+            <section class="col-start-2 row-start-3 space-y-4 sm:row-start-2">
+                <h5>RESOURCES</h5>
+                <ul class="space-y-1">
+                    <li><a href="/contact-us.html">Locations</a></li>
+                    <li><a href="/tips.html">Tips</a></li>
+                    <li><a href="/faqs.html">FAQs</a></li>
+                    <li><a href="/privacy-terms.html">Privacy & Terms</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Red Coat Clone (Tailwind CSS) | Antivirus & Intrusion Prevention
+    </title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- main script -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body class="font-sans text-zinc-950" x-data="{ openMenu : false }"
+    :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+    <header>
+        <section
+            class="site-nav relative z-40 bg-white text-base lg:fixed lg:inset-x-0 lg:grid lg:shadow-md xl:text-[15px]">
+            <!-- mobile menu -->
+            <div class="container relative flex max-w-none items-center justify-between py-4 xl:hidden">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <!-- mobile button -->
+                <button class="hamburger z-60 grid h-10 w-10 place-content-center rounded-full bg-white"
+                    @click="openMenu = !openMenu">
+                    <svg width="24" height="16" fill="currentColor" class="hamburger-open">
+                        <title>open menu</title>
+                        <g fill-rule="evenodd">
+                            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                        </g>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" class="hamburger-close hidden">
+                        <title>close menu</title>
+                        <path
+                            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="fixed inset-0 grid justify-items-end bg-zinc-950/10 xl:visible xl:relative xl:col-span-full xl:row-span-full xl:flex xl:bg-transparent"
+                :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                <div class="py-6.5 relative z-20 flex h-screen w-4/5 flex-col items-center bg-white transition-all xl:container sm:w-1/2 xl:h-auto xl:w-auto xl:translate-x-0 xl:flex-row xl:bg-transparent"
+                    :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+                    <a href="/index.html" class="hidden xl:block">
+                        <img src="/images/logo.png" alt="Red Coat" class="w-44 xl:w-auto" />
+                    </a>
+                    <nav class="w-4/5 xl:w-full">
+                        <ul
+                            class="mt-9 flex w-full flex-col justify-between gap-y-4 xl:ml-12 xl:mt-0 xl:flex-row xl:items-center">
+                            <li>
+                                <a href="/managed-it.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Managed IT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/it-consulting.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    IT Consulting
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/office-relocation.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Office Relocation
+                                </a>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl bg-red-100 px-4 hover:bg-red-100">
+                                    <span>CyberSecurity</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cybersecurity.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Webroot</a>
+                                    </li>
+                                    <li>
+                                        <a href="/antivirus-intrusion-prevention.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Antivirus &
+                                            Intrusion Prevention</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ransomware.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Ransomware</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>Migration Services</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cloud-migration-services.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Cloud Migration
+                                            Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/office-365-migration.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Office 365
+                                            Migration Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/about-us.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-col whitespace-nowrap pt-2 lg:ml-auto lg:mt-0 xl:hidden">
+                            <a href="/contact-us.html"
+                                class="btn-primary px-6 py-4 font-bold md:max-w-xs lg:px-3 lg:py-3.5 xl:px-7 xl:py-9">Contact
+                                Us</a>
+                        </div>
+                    </nav>
+                </div>
+                <div
+                    class="mt-4 hidden w-3/5 flex-col whitespace-nowrap border-t border-zinc-200 pt-4 xl:ml-auto xl:mt-0 xl:flex xl:w-auto xl:flex-row xl:border-none xl:pt-0">
+                    <a href="/contact-us.html"
+                        class="btn-primary px-6 py-4 font-bold md:max-w-xs xl:px-11 xl:py-9">Contact Us</a>
+                </div>
+                <!-- close -->
+                <button class="close-screen absolute inset-0 lg:hidden" @click="openMenu = !openMenu"></button>
+            </div>
+        </section>
+    </header>
+
+    <main class="relative z-30 bg-white pb-20">
+        <section class="grid h-full">
+            <video autoplay muted loop id="" class="h-full w-full object-cover xl:mt-12">
+                <source src="/videos/antivirus-intrusion-prevention.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+
+        <section class="container relative z-40 mt-20 space-y-16">
+            <article class="prose mx-auto mt-20 sm:prose-h2:text-5xl sm:prose-h3:text-3xl">
+                <h2>Actively Combat Threats</h2>
+
+                <p>
+                    Our comprehensive managed service offering includes a
+                    state-of-the-art antivirus and intrusion protection system designed
+                    to protect your network and data so that your valuable information
+                    is kept secure. Antivirus and intrusion software is designed to
+                    detect malicious behavior and destroy viruses that can pose a threat
+                    to your network. Antivirus and intrusion protection is used to
+                    monitor the behavior of your network to detect and report any
+                    unauthorized intrusions, including malicious hackers seeking to
+                    damage your network and steal your data. Whether you’re dealing with
+                    a virus from an employee who fell for a phishing scam or a hacker
+                    who is trying to steal your data, you’ll be protected.
+                </p>
+
+                <p>
+                    At Visual Network Solutions, we work exclusively with two very reputable partners in
+                    the industry, SonicWall and Webroot. We partner with SonicWall and
+                    Webroot to utilize tools that allow us to offer unmatched antivirus
+                    and intrusion protection services to our clients. Both of these
+                    partners are recognized experts in the area of security and
+                    protection, and we have the utmost trust in both to provide our
+                    clients with the security solutions they need.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>SonicWall –</strong> SonicWall’s advanced threat
+                        protection (ATP) service is a cloud-based multi-engine sandbox
+                        designed to discover and stop unknown threats and attacks at the
+                        door so that they don’t affect your network. Their solution
+                        includes antivirus and intrusion software and intrusion prevention
+                        technology designed to monitor incoming traffic and ensure that
+                        nothing poses a threat to your network. With firewalls, virtual
+                        firewalls, email security, wireless security, risk meters, and
+                        more, SonicWall protects your data from endpoint to endpoint.
+                        SonicWALL also provides robust deep packet inspection (DPI)
+                        including application filtering, intrusion prevention system
+                        (IPS), content filtering (CF), and gateway level
+                        anti-virus/anti-malware (AV/AM).
+                    </li>
+                    <li>
+                        <strong>Webroot –</strong> Webroot offers next-generation
+                        protection for your network. Their antivirus software has the key
+                        features needed to stop viruses and other threats to your network.
+                        Webroot BrightCloud® Threat Intelligence Services help to give our
+                        customers proactive protection against modern threats. Webroot has
+                        built one of the market’s most proven security platforms, ensuring
+                        that your pertinent data is kept safe from threats. Webroot offers
+                        DNS protection, endpoint protection, and antivirus and antimalware
+                        software.
+                    </li>
+                </ul>
+
+                <p>
+                    One of the key points of both SonicWall and Webroot is that they
+                    provide multiple security measures under the same umbrella. This
+                    multi-vector security and protection mean you don’t need to purchase
+                    a separate firewall, antivirus and intrusion program, and other
+                    security measures. It’s all in one package, so there are no
+                    compatibility issues. All of your security tools will work
+                    effortlessly together with without creating any conflicts or leaving
+                    any vulnerabilities for hackers to exploit. These tools also
+                    seamlessly integrate with the other solutions Visual Network Solutions offers. This
+                    type of umbrella protection also makes it easier for you to view
+                    your security solutions and understand how each is protecting you.
+                    Multiple layers of security is the key and not just relying on one
+                    system to protect you. As a part of our MSSP services we offer
+                    additional layers of protection for companies as well.
+                </p>
+
+                <h3>The Security Features You Must Have</h3>
+
+                <p>
+                    Your company needs to be protected, and that means making use of a
+                    number of common security features. However, through
+                    <a href="https://www.sonicwall.com/">SonicWall</a> and
+                    <a href="https://www.webroot.com/us/en/home">Webroot</a> , there’s
+                    nothing basic or simple about the security solutions we implement
+                    for you. These solutions are state of the art and are constantly
+                    evolving to meet your needs and to provide protection against the
+                    newest viruses, malware, and hacking tools. Here are some of the
+                    security features you will have available to you through our
+                    antivirus solutions and intrusion protection:
+                </p>
+
+                <li>
+                    <strong>Firewalls –</strong> The next-generation firewall hardware
+                    features real-time deep memory inspection to block attacks as they
+                    occur. With antivirus and threat protection from both, you’re
+                    protected with multiple layers of security. Your data is also
+                    encrypted using highly secure encryption methods.
+                </li>
+
+                <li>
+                    <strong>Antivirus Protection –</strong> Of course, no security
+                    solution would be complete without some form of virus protection.
+                    These security solutions constantly scan for viruses, malware,
+                    ransomware, and other malicious programs. When found, they’re
+                    quickly dealt with, and you’re provided a report describing the
+                    situation.
+                </li>
+
+                <p>
+                    <strong>DNS Protection –</strong> The Domain Name System is what
+                    directs users to the correct location. Unfortunately, DNS was
+                    designed and implemented in an age where cyber-terrorism and attacks
+                    were unheard of. This has left websites vulnerable to things such as
+                    hijacking, cache poisoning, denial of service attacks, and more. DNS
+                    protection protects a website from these issues by routing traffic
+                    through a cloud-based security solution.
+                </p>
+
+                <p>
+                    <strong>WiFi Security –</strong> As more devices cut the cord and go
+                    wireless, more security vulnerabilities appear. WiFi security is a
+                    must today. Fortunately, the new 802.11ac and 802.11n technology
+                    have made security easier while increasing the range and performance
+                    of WiFi.
+                </p>
+
+                <p>
+                    <strong>Mobile Device Management (MDM) –</strong> Along with WiFi,
+                    many people are now using mobile devices. Some of these devices may
+                    be company-owned, but others may be brought in by employees. All it
+                    takes is for one employee smartphone with a virus to infect your
+                    entire system. Mobile device security controls access provides
+                    security and minimizes these threats. It also protects your servers
+                    and mobile devices when employees log in from other WiFi networks.
+                </p>
+
+                <p>
+                    <strong>Email Security –</strong> Every email server needs
+                    protection, and cloud-based security is the new standard. It
+                    protects against phishing and fraud attacks by using real-time
+                    threat intelligence to catch malicious emails as they come in.
+                    Employees won’t click on these phishing URLs because the email will
+                    be scanned and quarantined before it hits their inbox.
+                </p>
+
+                <p>
+                    <strong>Endpoint Protection –</strong> You want your data to be
+                    protected from the moment it leaves your server to the minute it
+                    reaches the destination device. Capture Client by SonicWall is
+                    designed to offer this multiple endpoint protection. It guards
+                    against malware and ransomware, encrypts data at both ends, provides
+                    monitoring and detailed reports of your system and any attacks.
+                </p>
+
+                <p>
+                    <strong>Risk Meters –</strong> Risk meters help you view your
+                    system’s current security status, analyze any vulnerabilities, and
+                    help you identify security risks. You can also create various
+                    what-if scenarios to determine how your security would fare in
+                    various attacks. These scenarios can highlight where you need to
+                    focus your efforts.
+                </p>
+
+                <p>
+                    In addition to these tools, it’s also important that your employees
+                    have the training and knowledge needed to deal with any threat that
+                    does make it through your security.
+                    <a href="https://www.webroot.com/us/en/home">Webroot</a> offers
+                    security awareness training to do just that. It teaches your team
+                    about cybersecurity, compliance, and best practices. They will learn
+                    how to recognize phishing and other scams, identify malware, and
+                    understand the process for reporting potential threats and attacks.
+                    This training can greatly reduce your risk of cyber-attack since the
+                    largest percentage of network breaches actually come from user
+                    error. By making this training a part of your onboarding process,
+                    you can give your employees the education needed to protect
+                    themselves and your company.
+                </p>
+            </article>
+
+            <img src="/images/mssp.jpg" alt="" class="mx-auto h-96 w-3/5 object-cover" />
+
+            <article class="prose mx-auto mt-20 sm:prose-h2:text-5xl sm:prose-h3:text-3xl">
+                <h2>What is a Managed Services Security Provider (MSSP)?</h2>
+
+                <p>
+                    A managed services security provider offers outsourced monitoring
+                    and management of your security systems. Services commonly include
+                    firewalls, intrusion detection, virtual private network,
+                    vulnerability scanning, and anti-viral services. MSSPs use security
+                    operation centers (either from their facility or a data center) to
+                    provide 24/7 services designed to reduce the number of security
+                    personnel needed for your company.
+                </p>
+
+                <p>
+                    Companies with sensitive information that needs to be kept secure
+                    will typically choose to work with an MSSP. There are many benefits
+                    to using a managed services security provider:
+                </p>
+
+                <p>
+                    You can focus on doing the work that only you can do. No one else
+                    knows your business like you do, and there are tasks that only you
+                    can handle. With an MSSP as your partner, you can let the experts
+                    focus on keeping your network secure while you focus on running and
+                    growing the business.
+                </p>
+
+                <p>
+                    MSSP solutions are scalable. These services are cloud-based, which
+                    means adding or removing them is simple. If your company expands,
+                    your security services can likewise expand to meet those needs. When
+                    you need to pull back a bit, that’s also an option. Because
+                    everything is done as licenses through the cloud, there are no
+                    copies of software going unused or hardware to store.
+                </p>
+
+                <p>
+                    You save money by paying one price for your security solutions.
+                    Again, if you were to hire an in-house team, you would have to pay
+                    salary and benefits, purchase equipment for them to use, allocate
+                    facility space for them to work, and more. The MSSP handles all of
+                    these costs so you don’t have to budget for them. Instead, you
+                    budget the one single fee for security, helping you better
+                    anticipate your overall IT costs for the year.get the range of
+                    experience an MSSP has. Everyone working on your security solutions
+                    is trained in this area and has a deep understanding of what is
+                    necessary to protect your data.
+                </p>
+
+                <p>
+                    You save money by paying one price for your security solutions.
+                    Again, if you were to hire an in-house team, you would have to pay
+                    salary and benefits, purchase equipment for them to use, allocate
+                    facility space for them to work, and more. The MSSP handles all of
+                    these costs so you don’t have to budget for them. Instead, you
+                    budget the one single fee for security, helping you better
+                    anticipate your overall IT costs for the year.
+                </p>
+
+                <h3>We Monitor Your System 24/7</h3>
+
+                <p>
+                    One of our primary missions is to always defend the integrity of the
+                    functions of your business, and 24/7 security monitoring is one of
+                    our best tools for staying on guard. If you’re infiltrated by a
+                    malicious program, even if you find and deal with it quickly, it may
+                    still have time to do damage to your network or transmit some of
+                    your sensitive data elsewhere. We monitor your entire network so any
+                    such intrusion can be quickly discovered and malicious programs are
+                    blocked. We also watch for suspicious activities such as the
+                    activation of old accounts, unusual login times, or accounts trying
+                    to repeatedly access restricted data. Sometimes these are actually
+                    employees with no malicious intent, but it’s always best to confirm
+                    this rather than leave your system open to attack.
+                </p>
+
+                <p>
+                    That’s because even when an issue isn’t malicious, it still needs to
+                    be flagged and investigated. These unusual behaviors could be
+                    something as minor as an update that causes a small incompatibility
+                    issue, but that issue could still lead to problems or create
+                    security vulnerabilities that leave you open to attack. These small
+                    issues need to be resolved just as quickly as bigger problems, so
+                    they don’t grow to become major threats. These small issues can also
+                    build upon each other, resulting in huge security vulnerabilities
+                    down the line. Don’t let any type of issue go uninvestigated. Even
+                    the smallest problem can become something much worse if you give it
+                    time.
+                </p>
+
+                <p>
+                    When an employee account logs in late at night or early in the
+                    morning, it could simply be that employee doing some work at an odd
+                    hour. However, it could just as easily be a compromised account.
+                    Companies that don’t have 24/7 security monitoring may never know
+                    that the account was logged in or what was done unless they have a
+                    reason to check the logs. If the compromised account is carefully
+                    used, it could be weeks or even months before you realize the
+                    account is being used to steal data.
+                </p>
+
+                <p>
+                    Our 24/7 monitoring and support service ensures that you’re never
+                    left unaware of what’s going on with your technology. By dealing
+                    with malicious programs and attacks as soon as they happen, you can
+                    rest easy knowing that your data is safe. By monitoring how your IT
+                    resources are being used and investigating areas that aren’t
+                    operating as they should be, we can close any security
+                    vulnerabilities while also improving your efficiency and
+                    effectiveness. This also helps us identify tools that will need to
+                    be replaced or upgraded soon so you can schedule this process rather
+                    than waiting until the tool fails and leaves you in an unexpected
+                    lurch.
+                </p>
+            </article>
+
+            <img src="/images/never-worry.jpg" alt="" class="mx-auto h-96 w-3/5 object-cover" />
+
+            <article class="prose mx-auto mt-20 sm:prose-h2:text-5xl sm:prose-h3:text-3xl">
+                <h2>Never Worry About Your Network’s Security</h2>
+
+                <p>
+                    At Visual Network Solutions, it’s important to us that your valuable data stays safe.
+                    No virus or potential threat is a match for our antivirus and
+                    intrusion protection systems. We update constantly, adding new virus
+                    definitions and information about new phishing methods to our
+                    scanning software to catch even the latest malicious programs. To do
+                    otherwise would leave you vulnerable to these new forms of attack.
+                    With our solution in place, you can rest assured knowing that your
+                    data is safe from all threats and monitoring any suspicious
+                    activity. For comprehensive managed services that include
+                    top-quality antivirus, intrusion detection, and cyber-attack
+                    prevention systems, contact Visual Network Solutions.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="relative z-40 border-t border-zinc-100 bg-white py-12 text-sm">
+        <div class="container grid gap-x-4 gap-y-8 sm:gap-x-8 lg:flex lg:justify-between">
+            <section class="col-span-full row-start-1 flex flex-col items-start gap-y-4 sm:col-span-1">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <small class="text-sm">&copy; 2023 by Visual Network Solutions</small>
+            </section>
+
+            <section class="col-span-full row-start-2 space-y-4 sm:col-span-1 sm:row-start-1">
+                <h5>CONTACT</h5>
+                <address class="not-italic">
+                    <ul class="space-y-1">
+                        <li>Phone: <a href="tel:+ (210) 233-9880"> (210) 233-9880</a></li>
+                        <li>
+                            Email:
+                            <a href="mailto: vnssupport@visolutions.net"> vnssupport@visolutions.net</a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+
+            <section class="col-start-1 row-start-3 space-y-4 sm:row-start-2">
+                <h5>WORKING HOURS</h5>
+                <ul class="space-y-1">
+                    <li>Mon - Fri: 8am - 8pm</li>
+                    <li>Saturday: 9am - 7pm</li>
+                    <li>Sunday: 9am - 5pm</li>
+                </ul>
+
+                <ul class="space-y-1">
+                    <li>NOC</li>
+                    <li>24 Hours</li>
+                </ul>
+            </section>
+
+            <section class="col-start-2 row-start-3 space-y-4 sm:row-start-2">
+                <h5>RESOURCES</h5>
+                <ul class="space-y-1">
+                    <li><a href="/contact-us.html">Locations</a></li>
+                    <li><a href="/tips.html">Tips</a></li>
+                    <li><a href="/faqs.html">FAQs</a></li>
+                    <li><a href="/privacy-terms.html">Privacy & Terms</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

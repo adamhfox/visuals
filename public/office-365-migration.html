@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Coat Clone (Tailwind CSS) | Office 365 Migration Services</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- main script -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body class="font-sans text-zinc-950" x-data="{ openMenu : false }"
+    :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+    <header>
+        <section
+            class="site-nav relative z-40 bg-white text-base lg:fixed lg:inset-x-0 lg:grid lg:shadow-md xl:text-[15px]">
+            <!-- mobile menu -->
+            <div class="container relative flex max-w-none items-center justify-between py-4 xl:hidden">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <!-- mobile button -->
+                <button class="hamburger z-60 grid h-10 w-10 place-content-center rounded-full bg-white"
+                    @click="openMenu = !openMenu">
+                    <svg width="24" height="16" fill="currentColor" class="hamburger-open">
+                        <title>open menu</title>
+                        <g fill-rule="evenodd">
+                            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                        </g>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" class="hamburger-close hidden">
+                        <title>close menu</title>
+                        <path
+                            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="fixed inset-0 grid justify-items-end bg-zinc-950/10 xl:visible xl:relative xl:col-span-full xl:row-span-full xl:flex xl:bg-transparent"
+                :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                <div class="py-6.5 relative z-20 flex h-screen w-4/5 flex-col items-center bg-white transition-all xl:container sm:w-1/2 xl:h-auto xl:w-auto xl:translate-x-0 xl:flex-row xl:bg-transparent"
+                    :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+                    <a href="/index.html" class="hidden xl:block">
+                        <img src="/images/logo.png" alt="Red Coat" class="w-44 xl:w-auto" />
+                    </a>
+                    <nav class="w-4/5 xl:w-full">
+                        <ul
+                            class="mt-9 flex w-full flex-col justify-between gap-y-4 xl:ml-12 xl:mt-0 xl:flex-row xl:items-center">
+                            <li>
+                                <a href="/managed-it.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Managed IT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/it-consulting.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    IT Consulting
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/office-relocation.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Office Relocation
+                                </a>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>CyberSecurity</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cybersecurity.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Webroot</a>
+                                    </li>
+                                    <li>
+                                        <a href="/antivirus-intrusion-prevention.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Antivirus &
+                                            Intrusion Prevention</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ransomware.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Ransomware</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl bg-red-100 px-4 hover:bg-red-100">
+                                    <span>Migration Services</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cloud-migration-services.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Cloud Migration
+                                            Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/office-365-migration.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Office 365
+                                            Migration Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/about-us.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-col whitespace-nowrap pt-2 lg:ml-auto lg:mt-0 xl:hidden">
+                            <a href="/contact-us.html"
+                                class="btn-primary px-6 py-4 font-bold md:max-w-xs lg:px-3 lg:py-3.5 xl:px-7 xl:py-9">Contact
+                                Us</a>
+                        </div>
+                    </nav>
+                </div>
+                <div
+                    class="mt-4 hidden w-3/5 flex-col whitespace-nowrap border-t border-zinc-200 pt-4 xl:ml-auto xl:mt-0 xl:flex xl:w-auto xl:flex-row xl:border-none xl:pt-0">
+                    <a href="/contact-us.html"
+                        class="btn-primary px-6 py-4 font-bold md:max-w-xs xl:px-11 xl:py-9">Contact Us</a>
+                </div>
+                <!-- close -->
+                <button class="close-screen absolute inset-0 lg:hidden" @click="openMenu = !openMenu"></button>
+            </div>
+        </section>
+    </header>
+
+    <main class="relative z-30 bg-white pb-20">
+        <section class="relative grid h-[600px]">
+            <img src="/images/office-365-migration.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+        </section>
+
+        <section class="container relative z-40 space-y-16">
+            <article class="prose mx-auto mt-20 sm:prose-h2:text-5xl sm:prose-h3:text-3xl">
+                <p>We have migrated thousands of mailboxes to Office 365.</p>
+
+                <h2>The Visual Network Solutions Technology Group Are Experts At Migration</h2>
+
+                <p>
+                    The time for migration comes for every business or operation. Data
+                    migration is shifting your services from one application or program
+                    to another. These transitions are performed for a variety of
+                    reasons. The most common is due to advancement in technology or
+                    required upgrade. Technology is advancing every day, and we are
+                    always gaining new capabilities. This makes data migration part of
+                    your evolution as a business. It is a process that will be routinely
+                    required as you outgrow the old tools and new ones become available.
+                </p>
+
+                <p>
+                    Visual Network Solutions has become the experts in performing data migration. We have
+                    moved thousands of user mailboxes to the Office 365 application.
+                    <em class="not-italic text-red-600">Microsoft’s Office 365</em> is a
+                    subscription service that is part of their overall Microsoft Office
+                    product line. This bundle enables you to have access to the complete
+                    Microsoft Office software suite of products throughout the life
+                    cycle of your subscription terms. Beyond migrating mailboxes, the
+                    migration to Office 365 includes a variety of products that will be
+                    at your disposal:
+                </p>
+
+                <ul>
+                    <li>Outlook email service</li>
+                    <li>
+                        Hosted services like Skype for Business, Sharepoint, and Exchange
+                        Online
+                    </li>
+                    <li>
+                        Office desktop applications like Word, Excel, Powerpoint, and
+                        Publisher
+                    </li>
+                    <li>
+                        Collaboration tools like OneDrive for Business, SharePoint Online,
+                        and Outlook Online
+                    </li>
+                </ul>
+
+                <p>
+                    Another bonus of the subscription service is the routine updates, as
+                    a subscriber, you are entitled to new versions of software that
+                    become available and no longer have to pay the upfront purchase
+                    price.
+                </p>
+
+                <h3>
+                    Migrating Your Operation Is More Than Just Copying Email Contacts.
+                </h3>
+
+                <p>
+                    It upgrades your operations and protects the integrity of your data.
+                </p>
+
+                <h2>Data Migration Is All About A Seamless Transition</h2>
+
+                <p>
+                    Data migration can be a complex process, but the services we offer
+                    do make the procedure more straightforward. Cloud migrations are a
+                    streamlined strategy and applications like Office 365 make things go
+                    quicker. The basics of the process start with us creating a map of
+                    your current data and overlaying that onto the new application. This
+                    allows us to make sure that all of your data is properly
+                    re-formatted and will function correctly in the new program. Once
+                    things are mapped out, we begin the transition. Our experts will
+                    monitor the entire process to double-check everything is running
+                    smoothly. Our efforts will make your migration process seamless and
+                    without disrupting your daily operations. When you get down to the
+                    nuts and bolts of data migration, there are multiple ways to conduct
+                    the process.
+                </p>
+
+                <ul>
+                    <li>Cutover migration</li>
+                    <li>Staged migration</li>
+                    <li>Hybrid migration</li>
+                </ul>
+
+                <p>
+                    Office 365 hybrid migration is used to maintain on-site and online
+                    mailboxes simultaneously while we gradually transition your services
+                    to the Office 365 application. Visual Network Solutions’s mission has always been
+                    about solving your problems. Data migrations to services like Office
+                    365 are one of the ways we solve future issues before they happen
+                    and protect your operations for the long term.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="relative z-40 border-t border-zinc-100 bg-white py-12 text-sm">
+        <div class="container grid gap-x-4 gap-y-8 sm:gap-x-8 lg:flex lg:justify-between">
+            <section class="col-span-full row-start-1 flex flex-col items-start gap-y-4 sm:col-span-1">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <small class="text-sm">&copy; 2023 by Visual Network Solutions</small>
+            </section>
+
+            <section class="col-span-full row-start-2 space-y-4 sm:col-span-1 sm:row-start-1">
+                <h5>CONTACT</h5>
+                <address class="not-italic">
+                    <ul class="space-y-1">
+                        <li>Phone: <a href="tel:+ (210) 233-9880"> (210) 233-9880</a></li>
+                        <li>
+                            Email:
+                            <a href="mailto: vnssupport@visolutions.net"> vnssupport@visolutions.net</a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+
+            <section class="col-start-1 row-start-3 space-y-4 sm:row-start-2">
+                <h5>WORKING HOURS</h5>
+                <ul class="space-y-1">
+                    <li>Mon - Fri: 8am - 8pm</li>
+                    <li>Saturday: 9am - 7pm</li>
+                    <li>Sunday: 9am - 5pm</li>
+                </ul>
+
+                <ul class="space-y-1">
+                    <li>NOC</li>
+                    <li>24 Hours</li>
+                </ul>
+            </section>
+
+            <section class="col-start-2 row-start-3 space-y-4 sm:row-start-2">
+                <h5>RESOURCES</h5>
+                <ul class="space-y-1">
+                    <li><a href="/contact-us.html">Locations</a></li>
+                    <li><a href="/tips.html">Tips</a></li>
+                    <li><a href="/faqs.html">FAQs</a></li>
+                    <li><a href="/privacy-terms.html">Privacy & Terms</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Coat Clone (Tailwind CSS) | Tips</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- main script -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body class="font-sans text-zinc-950" x-data="{ openMenu : false }"
+    :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+    <header>
+        <section
+            class="site-nav relative z-40 bg-white text-base lg:fixed lg:inset-x-0 lg:grid lg:shadow-md xl:text-[15px]">
+            <!-- mobile menu -->
+            <div class="container relative flex max-w-none items-center justify-between py-4 xl:hidden">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <!-- mobile button -->
+                <button class="hamburger z-60 grid h-10 w-10 place-content-center rounded-full bg-white"
+                    @click="openMenu = !openMenu">
+                    <svg width="24" height="16" fill="currentColor" class="hamburger-open">
+                        <title>open menu</title>
+                        <g fill-rule="evenodd">
+                            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                        </g>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" class="hamburger-close hidden">
+                        <title>close menu</title>
+                        <path
+                            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="fixed inset-0 grid justify-items-end bg-zinc-950/10 xl:visible xl:relative xl:col-span-full xl:row-span-full xl:flex xl:bg-transparent"
+                :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                <div class="py-6.5 relative z-20 flex h-screen w-4/5 flex-col items-center bg-white transition-all xl:container sm:w-1/2 xl:h-auto xl:w-auto xl:translate-x-0 xl:flex-row xl:bg-transparent"
+                    :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+                    <a href="/index.html" class="hidden xl:block">
+                        <img src="/images/logo.png" alt="Red Coat" class="w-44 xl:w-auto" />
+                    </a>
+                    <nav class="w-4/5 xl:w-full">
+                        <ul
+                            class="mt-9 flex w-full flex-col justify-between gap-y-4 xl:ml-12 xl:mt-0 xl:flex-row xl:items-center">
+                            <li>
+                                <a href="/managed-it.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Managed IT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/it-consulting.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    IT Consulting
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/office-relocation.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Office Relocation
+                                </a>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>CyberSecurity</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cybersecurity.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Webroot</a>
+                                    </li>
+                                    <li>
+                                        <a href="/antivirus-intrusion-prevention.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Antivirus &
+                                            Intrusion Prevention</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ransomware.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Ransomware</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>Migration Services</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cloud-migration-services.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Cloud Migration
+                                            Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/office-365-migration.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Office 365
+                                            Migration Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/about-us.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-col whitespace-nowrap pt-2 lg:ml-auto lg:mt-0 xl:hidden">
+                            <a href="/contact-us.html"
+                                class="btn-primary px-6 py-4 font-bold md:max-w-xs lg:px-3 lg:py-3.5 xl:px-7 xl:py-9">Contact
+                                Us</a>
+                        </div>
+                    </nav>
+                </div>
+                <div
+                    class="mt-4 hidden w-3/5 flex-col whitespace-nowrap border-t border-zinc-200 pt-4 xl:ml-auto xl:mt-0 xl:flex xl:w-auto xl:flex-row xl:border-none xl:pt-0">
+                    <a href="/contact-us.html"
+                        class="btn-primary px-6 py-4 font-bold md:max-w-xs xl:px-11 xl:py-9">Contact Us</a>
+                </div>
+                <!-- close -->
+                <button class="close-screen absolute inset-0 lg:hidden" @click="openMenu = !openMenu"></button>
+            </div>
+        </section>
+    </header>
+
+    <main class="relative z-30 bg-white pb-20">
+        <section>
+            <div class="w-full overflow-hidden bg-red-600 lg:grid lg:h-96 lg:grid-cols-2 lg:pt-12 xl:h-[600px]">
+                <div class="container z-10 col-span-full row-span-full lg:grid lg:grid-cols-2">
+                    <div class="col-span-1 col-start-1 row-start-1 bg-red-600 py-6 text-white lg:grid lg:items-center">
+                        <div class="lg:max-w-md">
+                            <h1 class="text-5xl font-black md:text-7xl">Moving Tips</h1>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-1 col-start-2 row-start-1 -mx-5 px-5 py-6 md:-mx-10 md:px-10 lg:mx-0 lg:grid lg:place-items-center xl:bg-zinc-100 xl:px-12">
+                        <div class="lg:max-w-md">
+                            <p>
+                                I'm a paragraph. Click here to add your own text and edit me.
+                                It’s easy. Just click “Edit Text” or double click me to add
+                                your own content and make changes to the&nbsp;font.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 col-start-1 row-start-1 bg-red-600"></div>
+                <div class="col-span-1 col-start-2 row-start-1 bg-zinc-100"></div>
+            </div>
+        </section>
+
+        <section class="container mt-20">
+            <section class="grid gap-8 md:grid-cols-2">
+                <article
+                    class="prose bg-zinc-950 p-10 text-zinc-50 prose-h3:mt-0 prose-h3:text-left prose-h3:text-lg prose-h3:uppercase prose-h3:tracking-wide prose-h3:text-zinc-50">
+                    <h3>Make A List</h3>
+                    <p>
+                        I'm a paragraph. Click here to add your own text and edit me. It’s
+                        easy. Just click “Edit Text” or double click me to add your own
+                        content and make changes to the font. I’m a great place for you to
+                        tell a story and let your users know a little more about you.
+                    </p>
+                </article>
+                <article
+                    class="prose bg-red-300 p-10 text-zinc-950 prose-h3:mt-0 prose-h3:text-left prose-h3:text-lg prose-h3:uppercase prose-h3:tracking-wide prose-h3:text-zinc-950">
+                    <h3>Say Goodbye To Unused Stuff</h3>
+                    <p>
+                        I'm a paragraph. Click here to add your own text and edit me. It’s
+                        easy. Just click “Edit Text” or double click me to add your own
+                        content and make changes to the font. I’m a great place for you to
+                        tell a story and let your users know a little more about you.
+                    </p>
+                </article>
+                <article
+                    class="prose bg-red-300 p-10 text-zinc-950 prose-h3:mt-0 prose-h3:text-left prose-h3:text-lg prose-h3:uppercase prose-h3:tracking-wide prose-h3:text-zinc-950">
+                    <h3>Get Sturdy, Uniform Packing Supplies</h3>
+                    <p>
+                        I'm a paragraph. Click here to add your own text and edit me. It’s
+                        easy. Just click “Edit Text” or double click me to add your own
+                        content and make changes to the font. I’m a great place for you to
+                        tell a story and let your users know a little more about you.
+                    </p>
+                </article>
+                <article
+                    class="prose bg-zinc-950 p-10 text-zinc-50 prose-h3:mt-0 prose-h3:text-left prose-h3:text-lg prose-h3:uppercase prose-h3:tracking-wide prose-h3:text-zinc-50">
+                    <h3>Pack The Basics Yourself</h3>
+                    <p>
+                        I'm a paragraph. Click here to add your own text and edit me. It’s
+                        easy. Just click “Edit Text” or double click me to add your own
+                        content and make changes to the font. I’m a great place for you to
+                        tell a story and let your users know a little more about you.
+                    </p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer class="relative z-40 border-t border-zinc-100 bg-white py-12 text-sm">
+        <div class="container grid gap-x-4 gap-y-8 sm:gap-x-8 lg:flex lg:justify-between">
+            <section class="col-span-full row-start-1 flex flex-col items-start gap-y-4 sm:col-span-1">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <small class="text-sm">&copy; 2023 by Visual Network Solutions</small>
+            </section>
+
+            <section class="col-span-full row-start-2 space-y-4 sm:col-span-1 sm:row-start-1">
+                <h5>CONTACT</h5>
+                <address class="not-italic">
+                    <ul class="space-y-1">
+                        <li>Phone: <a href="tel:+ (210) 233-9880"> (210) 233-9880</a></li>
+                        <li>
+                            Email:
+                            <a href="mailto: vnssupport@visolutions.net"> vnssupport@visolutions.net</a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+
+            <section class="col-start-1 row-start-3 space-y-4 sm:row-start-2">
+                <h5>WORKING HOURS</h5>
+                <ul class="space-y-1">
+                    <li>Mon - Fri: 8am - 8pm</li>
+                    <li>Saturday: 9am - 7pm</li>
+                    <li>Sunday: 9am - 5pm</li>
+                </ul>
+
+                <ul class="space-y-1">
+                    <li>NOC</li>
+                    <li>24 Hours</li>
+                </ul>
+            </section>
+
+            <section class="col-start-2 row-start-3 space-y-4 sm:row-start-2">
+                <h5>RESOURCES</h5>
+                <ul class="space-y-1">
+                    <li><a href="/contact-us.html">Locations</a></li>
+                    <li><a href="/tips.html">Tips</a></li>
+                    <li><a href="/faqs.html">FAQs</a></li>
+                    <li><a href="/privacy-terms.html">Privacy & Terms</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

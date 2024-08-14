@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Coat Clone (Tailwind CSS) | Cloud Migration Services</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- main script -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body class="font-sans text-zinc-950" x-data="{ openMenu : false }"
+    :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+    <header>
+        <section
+            class="site-nav relative z-40 bg-white text-base lg:fixed lg:inset-x-0 lg:grid lg:shadow-md xl:text-[15px]">
+            <!-- mobile menu -->
+            <div class="container relative flex max-w-none items-center justify-between py-4 xl:hidden">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <!-- mobile button -->
+                <button class="hamburger z-60 grid h-10 w-10 place-content-center rounded-full bg-white"
+                    @click="openMenu = !openMenu">
+                    <svg width="24" height="16" fill="currentColor" class="hamburger-open">
+                        <title>open menu</title>
+                        <g fill-rule="evenodd">
+                            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                        </g>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" class="hamburger-close hidden">
+                        <title>close menu</title>
+                        <path
+                            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="fixed inset-0 grid justify-items-end bg-zinc-950/10 xl:visible xl:relative xl:col-span-full xl:row-span-full xl:flex xl:bg-transparent"
+                :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                <div class="py-6.5 relative z-20 flex h-screen w-4/5 flex-col items-center bg-white transition-all xl:container sm:w-1/2 xl:h-auto xl:w-auto xl:translate-x-0 xl:flex-row xl:bg-transparent"
+                    :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+                    <a href="/index.html" class="hidden xl:block">
+                        <img src="/images/logo.png" alt="Red Coat" class="w-44 xl:w-auto" />
+                    </a>
+                    <nav class="w-4/5 xl:w-full">
+                        <ul
+                            class="mt-9 flex w-full flex-col justify-between gap-y-4 xl:ml-12 xl:mt-0 xl:flex-row xl:items-center">
+                            <li>
+                                <a href="/managed-it.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Managed IT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/it-consulting.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    IT Consulting
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/office-relocation.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Office Relocation
+                                </a>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>CyberSecurity</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cybersecurity.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Webroot</a>
+                                    </li>
+                                    <li>
+                                        <a href="/antivirus-intrusion-prevention.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Antivirus &
+                                            Intrusion Prevention</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ransomware.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Ransomware</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl bg-red-100 px-4 hover:bg-red-100">
+                                    <span>Migration Services</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cloud-migration-services.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Cloud Migration
+                                            Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/office-365-migration.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Office 365
+                                            Migration Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/about-us.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-col whitespace-nowrap pt-2 lg:ml-auto lg:mt-0 xl:hidden">
+                            <a href="/contact-us.html"
+                                class="btn-primary px-6 py-4 font-bold md:max-w-xs lg:px-3 lg:py-3.5 xl:px-7 xl:py-9">Contact
+                                Us</a>
+                        </div>
+                    </nav>
+                </div>
+                <div
+                    class="mt-4 hidden w-3/5 flex-col whitespace-nowrap border-t border-zinc-200 pt-4 xl:ml-auto xl:mt-0 xl:flex xl:w-auto xl:flex-row xl:border-none xl:pt-0">
+                    <a href="/contact-us.html"
+                        class="btn-primary px-6 py-4 font-bold md:max-w-xs xl:px-11 xl:py-9">Contact Us</a>
+                </div>
+                <!-- close -->
+                <button class="close-screen absolute inset-0 lg:hidden" @click="openMenu = !openMenu"></button>
+            </div>
+        </section>
+    </header>
+
+    <main class="relative z-30 bg-white pb-20">
+        <section class="relative grid h-[600px]">
+            <img src="/images/cloud-migration-services.jpg" alt=""
+                class="absolute inset-0 h-full w-full object-cover" />
+        </section>
+
+        <section class="container relative z-40 space-y-16">
+            <article class="prose mx-auto mt-20 sm:prose-h2:text-5xl sm:prose-h3:text-3xl">
+                <p>
+                    Don’t settle for inferior migration services. Work with a qualified
+                    partner.
+                </p>
+
+                <h2>Not All Cloud Migration Services Are The Same</h2>
+
+                <p>
+                    Service providers often sell cloud-based services around the IT
+                    industry as a cure for many issues. The truth is that a cloud
+                    environment offers several advantages, but it is a tool that must be
+                    managed properly or it can create all-new problems for you. A
+                    migration to a cloud infrastructure must be managed and performed by
+                    professionals who understand the needs of your business and the ways
+                    to use the migration tools at their disposal. This expertise is
+                    precisely what Visual Network Solutions offers.
+                </p>
+
+                <p>
+                    We judge a successful cloud migration by customer satisfaction and
+                    whether you have all the tools you need. The cloud offers many
+                    opportunities for almost any company, but the bottom line for us is
+                    whether it fits into your operations. We make technology
+                    recommendations based on what our experience tells us is best for
+                    your business—not just what is the latest piece of tech. We want you
+                    to get the solutions that are right for you.
+                </p>
+
+                <p>
+                    Offices and workplaces that try to make the jump to cloud services
+                    without professional assistance can get lost in the weeds. It ends
+                    up costing them time and productivity to get back on track. Visual Network Solutions
+                    creates a cloud migration plan especially for your business. We take
+                    all your unique operations into account and execute the strategy
+                    that results in the least amount of disruption for you.
+                </p>
+
+                <h2>
+                    You Don’t Want To Miss Any Of The Details In Your Migration Journey.
+                </h2>
+
+                <p>
+                    Let Visual Network Solutions develop your migration planning so you don’t miss a
+                    step.
+                </p>
+
+                <h2>Why Are Businesses Moving to the Cloud?</h2>
+                <p>
+                    If migrating to the cloud can cause all of these issues, you might
+                    be asking yourself why so many companies are making the transition.
+                    Organizations across the world are turning to the cloud more and
+                    more because they’ve seen the power it has when it’s managed
+                    correctly. With qualified experts and a tailored perspective on
+                    technology, a cloud environment is cost-effective, increases
+                    mobility across your operations, and boosts productivity for years
+                    to come.
+                </p>
+
+                <p>
+                    With Visual Network Solutions at your side, the cloud can give your employees a form
+                    of secure freedom to operate that is rare to find in today’s world.
+                    Everyone is worried about cybersecurity, and they are right to be
+                    vigilant about safety. To businesses that are mindful of
+                    <em class="not-italic text-red-600">data security</em>, data
+                    migrations to any platform might sound like a security risk. We can
+                    identify these risks and create a workspace for your employees that
+                    takes advantage of the cloud while keeping your systems and data
+                    secure at the same time. This is the power of an experienced team
+                    like the people at Visual Network Solutions.
+                </p>
+
+                <h2>
+                    Cloud Services Are Going To Change With The Pace Of Technology
+                </h2>
+
+                <p>
+                    <em class="not-italic text-red-600">Cloud technology</em> is one of
+                    the most diverse fields in the IT industry today. It is always
+                    changing, and developers are always coming up with new tools. We
+                    stay current on these trends and what would help your business the
+                    most. Visual Network Solutions is your filter for sorting out the tech that is
+                    game-changing and the advances that are superfluous for your
+                    business. We don’t want anyone wasting time or money on technology
+                    that won’t help them in some way.
+                </p>
+
+                <p>
+                    Whether you have 50 employees or 100, we create scalable solutions
+                    that suit your current situation and leave room for your growth in
+                    the future. We are not just here for quick fixes or small solutions;
+                    our team wants to be your partner for today and tomorrow.
+                </p>
+
+                <p>
+                    We create lasting relationships with our clients that enable us to
+                    think about how we can help boost your performance and assist in
+                    your success in the long term. Migrations to new forms of technology
+                    are a natural part of your company’s growth, and we want to
+                    eliminate those growing pains. We want to give you a competitive
+                    edge in your industry that allows you to avoid the roadblocks and
+                    hurdles of modern technology. Reach out to Visual Network Solutions today so we can
+                    start planning for your future together.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="relative z-40 border-t border-zinc-100 bg-white py-12 text-sm">
+        <div class="container grid gap-x-4 gap-y-8 sm:gap-x-8 lg:flex lg:justify-between">
+            <section class="col-span-full row-start-1 flex flex-col items-start gap-y-4 sm:col-span-1">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <small class="text-sm">&copy; 2023 by Visual Network Solutions</small>
+            </section>
+
+            <section class="col-span-full row-start-2 space-y-4 sm:col-span-1 sm:row-start-1">
+                <h5>CONTACT</h5>
+                <address class="not-italic">
+                    <ul class="space-y-1">
+                        <li>Phone: <a href="tel:+ (210) 233-9880"> (210) 233-9880</a></li>
+                        <li>
+                            Email:
+                            <a href="mailto: vnssupport@visolutions.net"> vnssupport@visolutions.net</a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+
+            <section class="col-start-1 row-start-3 space-y-4 sm:row-start-2">
+                <h5>WORKING HOURS</h5>
+                <ul class="space-y-1">
+                    <li>Mon - Fri: 8am - 8pm</li>
+                    <li>Saturday: 9am - 7pm</li>
+                    <li>Sunday: 9am - 5pm</li>
+                </ul>
+
+                <ul class="space-y-1">
+                    <li>NOC</li>
+                    <li>24 Hours</li>
+                </ul>
+            </section>
+
+            <section class="col-start-2 row-start-3 space-y-4 sm:row-start-2">
+                <h5>RESOURCES</h5>
+                <ul class="space-y-1">
+                    <li><a href="/contact-us.html">Locations</a></li>
+                    <li><a href="/tips.html">Tips</a></li>
+                    <li><a href="/faqs.html">FAQs</a></li>
+                    <li><a href="/privacy-terms.html">Privacy & Terms</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Coat Clone (Tailwind CSS) | CyberSecurity</title>
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- main script -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body class="font-sans text-zinc-950" x-data="{ openMenu : false }"
+    :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+    <header>
+        <section
+            class="site-nav relative z-40 bg-white text-base lg:fixed lg:inset-x-0 lg:grid lg:shadow-md xl:text-[15px]">
+            <!-- mobile menu -->
+            <div class="container relative flex max-w-none items-center justify-between py-4 xl:hidden">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <!-- mobile button -->
+                <button class="hamburger z-60 grid h-10 w-10 place-content-center rounded-full bg-white"
+                    @click="openMenu = !openMenu">
+                    <svg width="24" height="16" fill="currentColor" class="hamburger-open">
+                        <title>open menu</title>
+                        <g fill-rule="evenodd">
+                            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                        </g>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" class="hamburger-close hidden">
+                        <title>close menu</title>
+                        <path
+                            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="fixed inset-0 grid justify-items-end bg-zinc-950/10 xl:visible xl:relative xl:col-span-full xl:row-span-full xl:flex xl:bg-transparent"
+                :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                <div class="py-6.5 relative z-20 flex h-screen w-4/5 flex-col items-center bg-white transition-all xl:container sm:w-1/2 xl:h-auto xl:w-auto xl:translate-x-0 xl:flex-row xl:bg-transparent"
+                    :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+                    <a href="/index.html" class="hidden xl:block">
+                        <img src="/images/logo.png" alt="Red Coat" class="w-44 xl:w-auto" />
+                    </a>
+                    <nav class="w-4/5 xl:w-full">
+                        <ul
+                            class="mt-9 flex w-full flex-col justify-between gap-y-4 xl:ml-12 xl:mt-0 xl:flex-row xl:items-center">
+                            <li>
+                                <a href="/managed-it.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Managed IT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/it-consulting.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    IT Consulting
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/office-relocation.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Office Relocation
+                                </a>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl bg-red-100 px-4 hover:bg-red-100">
+                                    <span>CyberSecurity</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cybersecurity.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Webroot</a>
+                                    </li>
+                                    <li>
+                                        <a href="/antivirus-intrusion-prevention.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Antivirus &
+                                            Intrusion Prevention</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ransomware.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Ransomware</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>Migration Services</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cloud-migration-services.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Cloud Migration
+                                            Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/office-365-migration.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Office 365
+                                            Migration Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/about-us.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-col whitespace-nowrap pt-2 lg:ml-auto lg:mt-0 xl:hidden">
+                            <a href="/contact-us.html"
+                                class="btn-primary px-6 py-4 font-bold md:max-w-xs lg:px-3 lg:py-3.5 xl:px-7 xl:py-9">Contact
+                                Us</a>
+                        </div>
+                    </nav>
+                </div>
+                <div
+                    class="mt-4 hidden w-3/5 flex-col whitespace-nowrap border-t border-zinc-200 pt-4 xl:ml-auto xl:mt-0 xl:flex xl:w-auto xl:flex-row xl:border-none xl:pt-0">
+                    <a href="/contact-us.html"
+                        class="btn-primary px-6 py-4 font-bold md:max-w-xs xl:px-11 xl:py-9">Contact Us</a>
+                </div>
+                <!-- close -->
+                <button class="close-screen absolute inset-0 lg:hidden" @click="openMenu = !openMenu"></button>
+            </div>
+        </section>
+    </header>
+
+    <main class="relative z-30 bg-white pb-20">
+        <section class="grid h-full">
+            <video autoplay muted loop id="" class="inset-0 h-full w-full object-cover xl:mt-12">
+                <source src="/videos/cybersecurity.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+
+        <section class="container relative z-40">
+            <article class="prose mx-auto mt-20 sm:prose-h2:text-5xl sm:prose-h3:text-3xl">
+                <p>
+                    Visual Network Solutions is a Managed Service Provider with Solutions for
+                    Cybersecurity with Webroot
+                </p>
+
+                <h2>What Is Webroot?</h2>
+                <h3>Webroot Anti-Virus Anti-Malware</h3>
+
+                <p>
+                    When it comes to ensuring that your technology is working to help
+                    you succeed, our promise to you at Visual Network Solutions Technology Group Inc. is
+                    to always make sure that your information is safe. We understand how
+                    many different directions a threat may come from, so you don’t have
+                    to. Our goal as a managed service provider is to ensure that you can
+                    trust the recommendations, we have about keeping yourself and your
+                    business safe with our
+                    <em class="not-italic text-red-600">security services</em>,
+                    including our anti-virus and anti-malware software solutions. That
+                    way, you can focus solely on keeping your business growing and
+                    thriving.
+                </p>
+
+                <p>
+                    One of the strongest forms of protection we provide is the
+                    <em class="not-italic text-red-600">Webroot®</em> SecureAnywhere
+                    anti-virus (AV) and anti-malware (AM) product. This program allows
+                    us to be able to provide security solutions that are fully
+                    cloud-based. It learns how to monitor and adapt to any type of
+                    protection you need, based on the threats you are most likely to
+                    face. <em class="not-italic text-red-600">Webroot®</em> offers
+                    protection against many types of risks, including:
+                </p>
+
+                <ul>
+                    <li>Ransomware</li>
+                    <li>Trojans</li>
+                    <li>Network infections</li>
+                    <li>Browser attacks</li>
+                    <li>Crypto-threats</li>
+                    <li>Malware</li>
+                    <li>Spyware</li>
+                    <li>Automated threats</li>
+                    <li>Phishing</li>
+                    <li>And more</li>
+                </ul>
+
+                <p>
+                    Webroot® anti-malware and anti-virus protection continuously
+                    monitors the types of threats you face and is able to predict what
+                    is coming so it can keep every bit of your information safe and
+                    secure. This is effective against both single and multi-vector
+                    threats that come at you or your business from anywhere. That means
+                    that if an attack occurs, Webroot is there to protect you in
+                    real-time, making this solution far more effective than any other
+                    solution your business may currently have in place.
+                </p>
+
+                <h3>Benefits of Using Webroot</h3>
+
+                <p>
+                    As an MSP, Texas businesses have come to rely on the information we
+                    provide them. As such, we make sure that we take the time to learn
+                    and understand every aspect of the services or products that we use
+                    and recommend. This is why we are happy to share our thoughts on
+                    some of the incredible benefits that come with using this
+                    cloud-based software. Aside from the fact that it is always up to
+                    date, you can expect benefits like these as well:
+                </p>
+
+                <p>
+                    <strong>30-second Installation:</strong> Putting Webroot® to work
+                    only takes 30 seconds. Plus, it is not going to conflict with any
+                    other software you have running. So, regardless of any type of
+                    updates, you need to perform, or if you ever have to install
+                    Webroot® on an additional system, it can be done quickly and
+                    efficiently, while also ensuring you and your business secure by
+                    drastically limiting any type of unprotected downtime.
+                </p>
+
+                <p>
+                    <strong>Automated Operation:</strong> When Webroot® was created, the
+                    user was kept in mind. Each part of the software is simple and
+                    intuitive. You can look through the templates that are already part
+                    of the system or create one that is as unique as your business. You
+                    never need a signature to manage your protection. Instead, the work
+                    is done from the cloud so there is no impact on anyone’s experience.
+                </p>
+
+                <p>
+                    <strong>Automated Updates:</strong> When you start using Webroot®,
+                    you can set how often you want it to update. The updates are totally
+                    transparent and take under five seconds in nearly all instances. You
+                    will be alerted when an update takes place, so you can run a new
+                    scan as soon as it is complete, should you so choose.
+                </p>
+
+                <p>
+                    <strong>It Can Be Managed Remotely:</strong> If you have an issue
+                    with Webroot®, we can look at it from our location without having to
+                    come to you to see what might be going on. It is set up with
+                    administrators when it is implemented, allowing only those with the
+                    proper codes and authorization to look at your system. All commands
+                    that may need to be input to correct an issue can be done from
+                    anywhere, so you never have to worry about trying to manage foreign
+                    software. We centrally manage Webroot® for our clients using our
+                    Datto Remote Management and Monitoring (RMM) Platform.
+                </p>
+
+                <p>
+                    <strong>Your Business Has Offline and Online Protection:</strong>
+                    Webroot® anti-virus software is powerful enough to keep track of any
+                    potential infection, even if that infection’s endpoint is no longer
+                    online. This gives you several benefits, including receiving fewer
+                    false alerts and the peace of mind that you will have reliable
+                    protection from anywhere in the world.
+                </p>
+
+                <p>
+                    <strong>Restoration is Simple:</strong> Since Webroot® anti-virus
+                    and anti-malware protection is able to protect as well as safeguard
+                    you both online and offline, you can restore any lost or corrupted
+                    information back to your systems to a time prior to the infection in
+                    a very small period of time. The best part is, that it can all be
+                    done without the need for re-imaging your drive.
+                </p>
+
+                <h3>Understanding the Power of Webroot</h3>
+
+                <p>
+                    Webroot SecureAnywhere is an efficient anti-virus software that
+                    focuses on security and speed. Its unique approach to detection and
+                    monitoring allows it to perform scans with little to no performance
+                    impact while maintaining one of the most robust databases of malware
+                    out there. It does this by having a list of known safe applications
+                    that can run immediately, and unknown applications are sent to their
+                    threat detection center for review.
+                </p>
+
+                <p>
+                    When taking a good look at various anti-virus and anti-malware
+                    software solutions available for businesses today, you’ll see that
+                    many don’t measure up to Webroot®. For example, Webroot® has a
+                    built-in extension that can be applied to any web browser you wish.
+                    At first glance, this might not seem like a big deal, as most other
+                    popular anti-virus and anti-malware programs boast similar
+                    extensions. However, the Webroot® extension can block dangerous or
+                    suspicious website URLs before Google Chrome’s built-in protection,
+                    which is a fact that very few protection software can boast about.
+                </p>
+
+                <p>
+                    Webroot SecureAnywhere is also able to provide your business with
+                    webcam protection, which is something that many other anti-virus
+                    software programs do not provide. When you consider how much of your
+                    business is conducted through video chat, it’s clear to see why this
+                    has quickly become one of the most talked-about features.
+                </p>
+
+                <p>
+                    The intelligence that powers Webroot® is world-class, and it has
+                    been evolving for well over a decade. The entire system learns as
+                    one unit and is able to update as a single unit as well. Each threat
+                    that Webroot® encounters is classified and categorized so that it
+                    can be studied and used as a learning tool to protect against future
+                    mutations of the same type of threat.
+                </p>
+
+                <p>
+                    The best way to understand how powerful Webroot is, is by looking at
+                    how it works. It stores the definitions of threats that the entire
+                    system has encountered. Each file is categorized as the type of
+                    threat it was and where it came from. All of this information is
+                    stored in the cloud rather than on the local PC. This dramatically
+                    reduces the workload on the PC, making it feel lighter than most
+                    other Anti-virus (AV) and anti-malware (AM) solutions on the market.
+                    I’m sure we’ve all experienced our PC’s slowing down after the
+                    install of an AV solution. One of Webroot’s big advantages is how
+                    lightweight and fast it is while maintaining security. This is the
+                    database in the cloud is what that Webroot learns from.
+                </p>
+
+                <p>
+                    As a new threat is categorized, and the location marked, the entire
+                    Webroot AV system can update because the software is cloud-based.
+                    This means that you and your company are never stuck with
+                    out-of-date software and that you are always prepared for virtually
+                    any type of attack. Whenever a new threat is located, an update to
+                    protect against it is pushed out as soon as possible, allowing for
+                    almost real-time protection against any type of online threat.
+                </p>
+
+                <h3>Benefits of Having a Security Software Online</h3>
+
+                <p>
+                    The sheer quantity of already-known data that covers current
+                    phishing attempts, malware threats, and similar risks is enormous.
+                    Having one database anywhere for all of this information would be
+                    incredibly difficult, not to mention slow, to update. However, since
+                    the information is all able to be stored online, this frees up space
+                    and allows for near-instantaneous adjustments when necessary.
+                </p>
+
+                <p>
+                    If you were to try and keep all of this information in your
+                    business, it would slow down your entire network. Every time your
+                    company tried to run a scan, the network resources would be taxed to
+                    the point of non-functionally. By having all the information in the
+                    cloud, scans take seconds to minutes to complete and there is no
+                    work stoppage during this phase of your security.
+                </p>
+
+                <h3>So Why Should You Choose Webroot?</h3>
+
+                <p>
+                    When considering what type of anti-virus and anti-malware program to
+                    go with to protect your business, you may be asking why you should
+                    choose Webroot as your option. This combination of endpoint
+                    protection and DNS protection helps to keep your business safe at
+                    all times. It was created and designed for small and medium
+                    businesses and the Webroot console can be automated to provide
+                    protection easily, so you can focus on growing your business.
+                </p>
+
+                <p>
+                    Webroot also has the experience you and your company can depend on.
+                    They have been busy keeping the internet safe for over 20 years,
+                    having first started back in 1997. They even went all-in on cloud
+                    platforms in 2011. Their servers have been able to apply machine
+                    learning through innovatively refining the cybersecurity processes
+                    since 2007. No matter what type of security threats you or your
+                    business may face, Webroot® has you covered.
+                </p>
+
+                <h3>The Security You Get with Webroot Protection</h3>
+
+                <p>
+                    Nearly everyone understands that using any type of computer carries
+                    inherent risks. That is where the vitality of security comes from.
+                    There are constant new sources of ransomware and dangerous software
+                    coming at you regularly. It is not just from computers, either. It
+                    can come from any type of device that has the ability to go online
+                    and connect with a network. These threats are real and can do a lot
+                    more damage than what may appear on the surface. When you rely on
+                    Webroot AV and AM protection, you have a network of safety
+                    surrounding every bit of information you hold dear. That, in and of
+                    itself, can boost the value of your business.
+                </p>
+
+                <h3>Your Security Should Not Slow You Down</h3>
+
+                <p>
+                    Have you ever installed an anti-virus program that changed how your
+                    entire network functioned during a scan, slowing it down to a crawl
+                    and making getting anything done in a timely manner nearly
+                    impossible? That will not be an issue when you install Webroot. This
+                    system is incredibly light and not dependent on numerous resources.
+                    That means when you run a scan, you and your customers will be able
+                    to carry on like normal. This is possible because Webroot runs in
+                    the cloud. You will barely notice that the program is around, other
+                    than the fact that you will have fewer worries of phishing or key
+                    logger issues.
+                </p>
+
+                <p>
+                    The Webroot servers are doing the vast majority of the work on their
+                    end. That way, you can run a full scan without interrupting your
+                    day. This means you get an easier Webroot installation, a smaller
+                    footprint in your personal and business networks, boosted company
+                    value and security, plus little, if any, slowdown. Your company has
+                    nothing to lose, and a library of protection to gain.
+                </p>
+
+                <p>
+                    For those companies with older networks, servers, or devices, you
+                    can get the benefits of Webroot AV and AM, too. The anti-virus
+                    protection Webroot offers is not limited to use on only current
+                    devices. It is compatible with many older devices, allowing you to
+                    have the protection you need without the device upgrade bill you
+                    don’t.
+                </p>
+
+                <p>
+                    Where some anti-virus programs use a single tool to protect your
+                    information, Webroot uses several. The goal is to provide smooth
+                    protection of your IT infrastructure while keeping your servers of
+                    information safe through remote monitoring. Both of these tools
+                    provide an integration that allows them to work simultaneously. If
+                    any type of threat, misconfiguration, or infection is detected, an
+                    email alert is sent out so we can take immediate action. If we need
+                    to reinstall Webroot or adjust a setting, it can be done remotely.
+                    You have protection 24/7 without you even knowing that it is
+                    happening or having to lift a finger to alert anyone.
+                </p>
+
+                <p>
+                    The integration of these tools allows us to have a quicker response
+                    than most other antivirus programs on the market. This gives you
+                    better service and allows you to have updated security promises you
+                    can make to your customers.
+                </p>
+
+                <h3>We Also Install Webroot ChromeBrowser Extensions</h3>
+
+                <p>
+                    The list of websites that should not be trusted grows daily. The
+                    same goes for the library of checked websites in the Webroot
+                    directory. If you want to know what websites are safe and which are
+                    not, you can include the Webroot Google Chrome add-on for your
+                    <a href="https://answers.webroot.com/Webroot/ukp.aspx?pid=17&vw=1&app=vw&solutionid=1760">Browser
+                        Extensions</a>
+                    for Chrome, Firefox, and Internet Explorer. That way, you can see
+                    which websites are safe before ever opening them. This keeps your
+                    information away from even more potential threats, plus it blocks
+                    unsafe sites from even being accessed by you or anyone else in your
+                    network. You are getting the protection that goes beyond just you,
+                    and also covers your customers and employees, too.
+                </p>
+
+                <h3>Visual Network Solutions Technology Group, Inc. Recommends Webroot Protection</h3>
+
+                <p>
+                    When looking at all the features Webroot can provide, it is no
+                    wonder that we recommend this antivirus to many of our business
+                    customers. Why not invest in something that can add value to your
+                    business and give your customers peace of mind? You do not have to
+                    worry that your network or resources will slow down while also
+                    having constant protection both online and offline.
+                </p>
+
+                <p>
+                    It used to be that hackers would hide out in the basement and hope
+                    to get lucky with a spam email or phishing attack. However, that is
+                    no longer the case. Today’s cyber attackers are far more intuitive.
+                    They know how to hit, when to hit, and what information to put in
+                    front of you that makes you most likely to take the bait.
+                    Thankfully, Webroot has spent over 20 years learning from the
+                    mistakes of these attackers. It also knows what to look for, but it
+                    has the intent of keeping you safe from an attack. Trust the
+                    protection you get from a constantly evolving antivirus program like
+                    Webroot. Know that you, your family, and your business’ information
+                    will all be safe when Webroot is a part of a multi-layer
+                    <em class="not-italic text-red-600">Managed Services Security Provider</em>
+                    (MSSP) suite of security tools. Take a look at the other tools we
+                    use to keep you safe as well!
+                </p>
+
+                <p>
+                    Do you want to learn more about the IT services Texas business owners
+                    have come to know and trust? Contact us here at Visual Network Solutions today! Let
+                    us help you get your company to a new level of security. We can
+                    start with a new Webroot installation and ramp up our efforts to
+                    cover any type of IT issues you may face. We are here to help ensure
+                    that your technology is helping you stay safe and productive.
+                </p>
+
+                <h3>What Are You Doing To Protect Your Network?</h3>
+                <p>
+                    Visual Network Solutions helps you formulate concrete answers to questions like this.
+                </p>
+
+                <h2>Empower Your Team With Awareness Training</h2>
+                <h3>Are You At Risk For A Cyber Attack?</h3>
+
+                <p>
+                    Ninety-five percent of network security breaches are due to human
+                    error. Empowering your team with the knowledge and skills to
+                    identify cybersecurity threats is essential to keeping your network
+                    protected. After all, a team of cybersecurity experts can only
+                    protect your network so much; at a certain point, it’s up to your
+                    everyday users to sidestep threats before they cripple your network.
+                    That’s where cybersecurity awareness training, such as phishing
+                    email training from Visual Network Solutions, comes into play.
+                </p>
+
+                <p>
+                    The first step to cultivating a culture of cybersecurity awareness
+                    is simply to inform your team about the reality of cyber threats. As
+                    new threats emerge, it’s critical to provide ongoing training that
+                    helps employees spot threats and avoid them. Phishing email training
+                    is one of the most straightforward ways of accomplishing this goal.
+                    When you partner with Visual Network Solutions, it’s easy to ensure your team stays
+                    one step ahead of cybercriminals by automating ongoing phishing
+                    attacks.
+                </p>
+
+                <p>
+                    Phishing email training automatically sends team members simulated
+                    phishing attacks on an ongoing basis. Your team will be able to
+                    report the email as phishing or, if caught unaware, click on one of
+                    the links. If they report the email, they’re congratulated and
+                    notified that it was a simulated attack. If, however, they fall
+                    victim to the simulated attack, they’re required to complete an
+                    additional security awareness training course online to bolster
+                    their awareness. Read more about
+                    <a href="#">Antivirus and Antimalware here</a>.
+                </p>
+
+                <h2>Comprehensive Cybersecurity Solutions</h2>
+
+                <p>
+                    When you partner with Visual Network Solutions, we secure your network with a
+                    comprehensive cybersecurity platform that protects every level of
+                    your operations. Our approach includes the latest network security
+                    strategies like dark web scanning and phishing email training, all
+                    for one fixed monthly price.
+                </p>
+
+                <p>
+                    With Visual Network Solutions overseeing your larger cybersecurity needs and threats,
+                    you can be confident you’re staying ahead of the latest developments
+                    in the industry while preparing for the challenges of tomorrow. As
+                    part of our cybersecurity package, we protect you from external
+                    threats such as data breaches and unauthorized access to your
+                    network, while also guarding against internal threats with disaster
+                    recovery solutions.
+                </p>
+
+                <h2>Texas IT Support</h2>
+
+                <p>
+                    If you’re ready to take a more proactive approach to cybersecurity,
+                    you need a team of experts developing and overseeing your
+                    overarching security roadmap. Visual Network Solutions has the experience and skills
+                    to develop customized cybersecurity strategies around your unique
+                    operations. We’ll work with you to assess your team’s workflows from
+                    the inside out and keep you protected from internal and external
+                    threats. Get in touch with our team today to start exploring how
+                    much your cybersecurity platform can be doing to protect your bottom
+                    line and mission-critical data.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="relative z-40 border-t border-zinc-100 bg-white py-12 text-sm">
+        <div class="container grid gap-x-4 gap-y-8 sm:gap-x-8 lg:flex lg:justify-between">
+            <section class="col-span-full row-start-1 flex flex-col items-start gap-y-4 sm:col-span-1">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <small class="text-sm">&copy; 2023 by Visual Network Solutions</small>
+            </section>
+
+            <section class="col-span-full row-start-2 space-y-4 sm:col-span-1 sm:row-start-1">
+                <h5>CONTACT</h5>
+                <address class="not-italic">
+                    <ul class="space-y-1">
+                        <li>Phone: <a href="tel:+ (210) 233-9880"> (210) 233-9880</a></li>
+                        <li>
+                            Email:
+                            <a href="mailto: vnssupport@visolutions.net"> vnssupport@visolutions.net</a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+
+            <section class="col-start-1 row-start-3 space-y-4 sm:row-start-2">
+                <h5>WORKING HOURS</h5>
+                <ul class="space-y-1">
+                    <li>Mon - Fri: 8am - 8pm</li>
+                    <li>Saturday: 9am - 7pm</li>
+                    <li>Sunday: 9am - 5pm</li>
+                </ul>
+
+                <ul class="space-y-1">
+                    <li>NOC</li>
+                    <li>24 Hours</li>
+                </ul>
+            </section>
+
+            <section class="col-start-2 row-start-3 space-y-4 sm:row-start-2">
+                <h5>RESOURCES</h5>
+                <ul class="space-y-1">
+                    <li><a href="/contact-us.html">Locations</a></li>
+                    <li><a href="/tips.html">Tips</a></li>
+                    <li><a href="/faqs.html">FAQs</a></li>
+                    <li><a href="/privacy-terms.html">Privacy & Terms</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

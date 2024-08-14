@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Coat Clone (Tailwind CSS)</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- main script -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/js/main.js"></script>
+
+    <!-- calculator -->
+    <script src="/js/jquery-git.js"></script>
+    <script src="/js/jspdf.min.js"></script>
+    <!-- <script src="/js/ouibounce.min.js"></script> -->
+    <script src="/js/pdfdownloadd15b.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nobackup").click(function () {
+                $("#nobackuptime").toggleClass("disable");
+                $(".nobk").toggleClass("disable");
+            });
+        });
+    </script>
+
+    <script>
+        (window.BOOMR_mq = window.BOOMR_mq || []).push([
+            "addVar",
+            {
+                "rua.upush": "false",
+                "rua.cpush": "true",
+                "rua.upre": "false",
+                "rua.cpre": "false",
+                "rua.uprl": "false",
+                "rua.cprl": "false",
+                "rua.cprf": "false",
+                "rua.trans": "SJ-27f42e8e-4513-4c17-bf48-cfc61cdff581",
+                "rua.cook": "false",
+                "rua.ims": "false",
+                "rua.ufprl": "false",
+                "rua.cfprl": "false",
+                "rua.isuxp": "false",
+                "rua.texp": "norulematch",
+            },
+        ]);
+    </script>
+    <script>
+        !(function (e) {
+            var n = "https://s.go-mpulse.net/boomerang/";
+            if ("False" == "True")
+                (e.BOOMR_config = e.BOOMR_config || {}),
+                    (e.BOOMR_config.PageParams = e.BOOMR_config.PageParams || {}),
+                    (e.BOOMR_config.PageParams.pci = !0),
+                    (n = "https://s2.go-mpulse.net/boomerang/");
+            if (
+                ((window.BOOMR_API_key = "ADFJU-JLQN3-HTPV7-4HH2X-GLW5M"),
+                    (function () {
+                        function e() {
+                            if (!o) {
+                                var e = document.createElement("script");
+                                (e.id = "boomr-scr-as"),
+                                    (e.src = window.BOOMR.url),
+                                    (e.async = !0),
+                                    i.parentNode.appendChild(e),
+                                    (o = !0);
+                            }
+                        }
+                        function t(e) {
+                            o = !0;
+                            var n,
+                                t,
+                                a,
+                                r,
+                                d = document,
+                                O = window;
+                            if (
+                                ((window.BOOMR.snippetMethod = e ? "if" : "i"),
+                                    (t = function (e, n) {
+                                        var t = d.createElement("script");
+                                        (t.id = n || "boomr-if-as"),
+                                            (t.src = window.BOOMR.url),
+                                            (BOOMR_lstart = new Date().getTime()),
+                                            (e = e || d.body),
+                                            e.appendChild(t);
+                                    }),
+                                    !window.addEventListener &&
+                                    window.attachEvent &&
+                                    navigator.userAgent.match(/MSIE [67]\./))
+                            )
+                                return (
+                                    (window.BOOMR.snippetMethod = "s"),
+                                    void t(i.parentNode, "boomr-async")
+                                );
+                            (a = document.createElement("IFRAME")),
+                                (a.src = "about:blank"),
+                                (a.title = ""),
+                                (a.role = "presentation"),
+                                (a.loading = "eager"),
+                                (r = (a.frameElement || a).style),
+                                (r.width = 0),
+                                (r.height = 0),
+                                (r.border = 0),
+                                (r.display = "none"),
+                                i.parentNode.appendChild(a);
+                            try {
+                                (O = a.contentWindow), (d = O.document.open());
+                            } catch (_) {
+                                (n = document.domain),
+                                    (a.src =
+                                        "javascript:var d=document.open();d.domain='" +
+                                        n +
+                                        "';void(0);"),
+                                    (O = a.contentWindow),
+                                    (d = O.document.open());
+                            }
+                            if (n)
+                                (d._boomrl = function () {
+                                    (this.domain = n), t();
+                                }),
+                                    d.write("<bo" + "dy onload='document._boomrl();'>");
+                            else if (
+                                ((O._boomrl = function () {
+                                    t();
+                                }),
+                                    O.addEventListener)
+                            )
+                                O.addEventListener("load", O._boomrl, !1);
+                            else if (O.attachEvent) O.attachEvent("onload", O._boomrl);
+                            d.close();
+                        }
+                        function a(e) {
+                            window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+                        }
+                        if (
+                            !window.BOOMR ||
+                            (!window.BOOMR.version && !window.BOOMR.snippetExecuted)
+                        ) {
+                            (window.BOOMR = window.BOOMR || {}),
+                                (window.BOOMR.snippetStart = new Date().getTime()),
+                                (window.BOOMR.snippetExecuted = !0),
+                                (window.BOOMR.snippetVersion = 12),
+                                (window.BOOMR.url = n + "ADFJU-JLQN3-HTPV7-4HH2X-GLW5M");
+                            var i =
+                                document.currentScript ||
+                                document.getElementsByTagName("script")[0],
+                                o = !1,
+                                r = document.createElement("link");
+                            if (
+                                r.relList &&
+                                "function" == typeof r.relList.supports &&
+                                r.relList.supports("preload") &&
+                                "as" in r
+                            )
+                                (window.BOOMR.snippetMethod = "p"),
+                                    (r.href = window.BOOMR.url),
+                                    (r.rel = "preload"),
+                                    (r.as = "script"),
+                                    r.addEventListener("load", e),
+                                    r.addEventListener("error", function () {
+                                        t(!0);
+                                    }),
+                                    setTimeout(function () {
+                                        if (!o) t(!0);
+                                    }, 3e3),
+                                    (BOOMR_lstart = new Date().getTime()),
+                                    i.parentNode.appendChild(r);
+                            else t(!1);
+                            if (window.addEventListener)
+                                window.addEventListener("load", a, !1);
+                            else if (window.attachEvent) window.attachEvent("onload", a);
+                        }
+                    })(),
+                    "".length > 0)
+            )
+                if (
+                    e &&
+                    "performance" in e &&
+                    e.performance &&
+                    "function" == typeof e.performance.setResourceTimingBufferSize
+                )
+                    e.performance.setResourceTimingBufferSize();
+            !(function () {
+                if (
+                    ((BOOMR = e.BOOMR || {}),
+                        (BOOMR.plugins = BOOMR.plugins || {}),
+                        !BOOMR.plugins.AK)
+                ) {
+                    var n = "true" == "true" ? 1 : 0,
+                        t = "",
+                        a = "rcpavt3iksxrazej5qbq-f-be03b9dda-clientnsv4-s.akamaihd.net",
+                        i = "false" == "true" ? 2 : 1,
+                        o = {
+                            "ak.v": "36",
+                            "ak.cp": "333636",
+                            "ak.ai": parseInt("217875", 10),
+                            "ak.ol": "0",
+                            "ak.cr": 128,
+                            "ak.ipv": 4,
+                            "ak.proto": "http/1.1",
+                            "ak.rid": "200898ff",
+                            "ak.r": 31213,
+                            "ak.a2": n,
+                            "ak.m": "a",
+                            "ak.n": "essl",
+                            "ak.bpcip": "136.158.10.0",
+                            "ak.cport": 32163,
+                            "ak.gh": "23.43.48.133",
+                            "ak.quicv": "",
+                            "ak.tlsv": "tls1.2",
+                            "ak.0rtt": "",
+                            "ak.csrc": "-",
+                            "ak.acc": "reno",
+                            "ak.t": "1686760451",
+                            "ak.ak":
+                                "hOBiQwZUYzCg5VSAfCLimQ==1LiBnQyWDhgI0W1rpsDOZy5XTrDw89m5MMUY/Njczp/cvPbCZgPg+MMTEfVW9jg/VuyFQp746frisvyD9ZS9zvWQjK6Y77r++2zd5nMMSP8fgGF/ely0TSZCSd+S47o2ZVA9ywTRgZ5/GOE4SFETEbQf9b3rqhnVJLUDksZaHNAYZzBF18HxrCdQXEhveZlOz4lZ7lG56vKx3OedjzH4DU9gtTgQM4120sVmPSps7RbzbjT03Ax1Gvzkj6jVzlG428kKWCuaX29C60FftdHmBg6q7ZSxd/Ef3nuaUYnD5NU8HtS4+DU5iWLCN+Agd2X97gn2zabaHSk1AgAHauZiG/yNPOA3mDUzcXPnzBM1gGDtjkyA9FwmXrZT8yyIhiPEPqtyNSUsIAq/kQAmW3NL0FAaEgYaIDvrORLT92idCRc=",
+                            "ak.pv": "66",
+                            "ak.dpoabenc": "",
+                            "ak.tf": i,
+                        };
+                    if ("" !== t) o["ak.ruds"] = t;
+                    var r = {
+                        i: !1,
+                        av: function (n) {
+                            var t = "http.initiator";
+                            if (n && (!n[t] || "spa_hard" === n[t]))
+                                (o["ak.feo"] = void 0 !== e.aFeoApplied ? 1 : 0),
+                                    BOOMR.addVar(o);
+                        },
+                        rv: function () {
+                            var e = [
+                                "ak.bpcip",
+                                "ak.cport",
+                                "ak.cr",
+                                "ak.csrc",
+                                "ak.gh",
+                                "ak.ipv",
+                                "ak.html",
+                                "ak.n",
+                                "ak.ol",
+                                "ak.proto",
+                                "ak.quicv",
+                                "ak.tlsv",
+                                "ak.0rtt",
+                                "ak.r",
+                                "ak.acc",
+                                "ak-2.html",
+                                "ak.tf",
+                            ];
+                            BOOMR.removeVar(e);
+                        },
+                    };
+                    BOOMR.plugins.AK = {
+                        akVars: o,
+                        akDNSPreFetchDomain: a,
+                        init: function () {
+                            if (!r.i) {
+                                var e = BOOMR.subscribe;
+                                e("before_beacon", r.av, null, null),
+                                    e("onbeacon", r.rv, null, null),
+                                    (r.i = !0);
+                            }
+                            return this;
+                        },
+                        is_complete: function () {
+                            return !0;
+                        },
+                    };
+                }
+            })();
+        })(window);
+    </script>
+</head>
+
+<body class="font-sans text-zinc-950" x-data="{ openMenu : false }"
+    :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+    <header class="h-screen">
+        <section
+            class="site-nav relative z-40 bg-white text-base lg:fixed lg:inset-x-0 lg:grid lg:shadow-md xl:text-[15px]">
+            <!-- mobile menu -->
+            <div class="container relative flex max-w-none items-center justify-between py-4 xl:hidden">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <!-- mobile button -->
+                <button class="hamburger z-60 grid h-10 w-10 place-content-center rounded-full bg-white"
+                    @click="openMenu = !openMenu">
+                    <svg width="24" height="16" fill="currentColor" class="hamburger-open">
+                        <title>open menu</title>
+                        <g fill-rule="evenodd">
+                            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                        </g>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" class="hamburger-close hidden">
+                        <title>close menu</title>
+                        <path
+                            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <div class="fixed inset-0 grid justify-items-end bg-zinc-950/10 xl:visible xl:relative xl:col-span-full xl:row-span-full xl:flex xl:bg-transparent"
+                :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+                <div class="py-6.5 relative z-20 flex h-screen w-4/5 flex-col items-center bg-white transition-all xl:container sm:w-1/2 xl:h-auto xl:w-auto xl:translate-x-0 xl:flex-row xl:bg-transparent"
+                    :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
+                    <a href="/index.html" class="hidden xl:block">
+                        <img src="/images/logo.png" alt="Red Coat" class="w-44" />
+                    </a>
+                    <nav class="w-4/5 xl:w-full">
+                        <ul
+                            class="mt-9 flex w-full flex-col justify-between gap-y-4 xl:ml-12 xl:mt-0 xl:flex-row xl:items-center">
+                            <li>
+                                <a href="/managed-it.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Managed IT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/it-consulting.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    IT Consulting
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/office-relocation.html"
+                                    class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    Office Relocation
+                                </a>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>CyberSecurity</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cybersecurity.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Webroot</a>
+                                    </li>
+                                    <li>
+                                        <a href="/antivirus-intrusion-prevention.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Antivirus &
+                                            Intrusion Prevention</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ransomware.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Ransomware</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li x-data="{open : false}" class="xl:relative">
+                                <button @mouseover="open = true"
+                                    class="flex w-full items-center gap-x-1 rounded-2xl px-4 hover:bg-red-100">
+                                    <span>Migration Services</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-600"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul x-show="open === true" x-transition="" @mouseover.outside="open = false"
+                                    class="top-6 w-max space-y-2 bg-white px-2 py-4 xl:absolute xl:rounded-md xl:border xl:border-zinc-50 xl:shadow-md">
+                                    <li>
+                                        <a href="/cloud-migration-services.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Cloud Migration
+                                            Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/office-365-migration.html"
+                                            class="block rounded-2xl px-4 duration-200 hover:bg-red-100">Office 365
+                                            Migration Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/about-us.html" class="block rounded-2xl px-4 duration-200 hover:bg-red-100">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-col whitespace-nowrap pt-2 lg:ml-auto lg:mt-0 xl:hidden">
+                            <a href="/contact-us.html"
+                                class="btn-primary px-6 py-4 font-bold md:max-w-xs lg:px-3 lg:py-3.5 xl:px-7 xl:py-9">Contact
+                                Us</a>
+                        </div>
+                    </nav>
+                </div>
+                <div
+                    class="mt-4 hidden w-3/5 flex-col whitespace-nowrap border-t border-zinc-200 pt-4 xl:ml-auto xl:mt-0 xl:flex xl:w-auto xl:flex-row xl:border-none xl:pt-0">
+                    <a href="/contact-us.html"
+                        class="btn-primary px-6 py-4 font-bold md:max-w-xs xl:px-11 xl:py-9">Contact Us</a>
+                </div>
+                <!-- close -->
+                <button class="close-screen absolute inset-0 lg:hidden" @click="openMenu = !openMenu"></button>
+            </div>
+        </section>
+
+        <section class="grid h-full items-center overflow-hidden">
+            <div class="container z-20 col-span-full row-span-full">
+                <div class="max-w-5xl text-white">
+                    <h1 class="text-5xl font-black md:text-7xl">
+                        Managed IT Support & IT Solutions
+                    </h1>
+
+                    <div class="mt-8 grid max-w-lg sm:grid-cols-2">
+                        <a href="#" class="btn-secondary flex-col px-10 py-8">
+                            <span class="block uppercase">Call us</span>
+                            <span class="font-normal"> (210) 233-9880</span>
+                        </a>
+                        <a href="#" class="btn-primary flex-col px-10 py-8 hover:bg-white hover:text-zinc-950">
+                            <span class="block uppercase">Start online</span>
+                            <span class="font-normal">Get a Quote</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixed inset-0 z-10 bg-zinc-900/20">
+                <!-- overlay -->
+            </div>
+            <video autoplay muted loop id="" class="fixed inset-0 h-full w-full object-cover">
+                <source src="/videos/hero.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+            </video>
+        </section>
+    </header>
+
+    <main class="relative z-30 bg-zinc-100">
+        <section class="">
+            <div class="grid overflow-hidden bg-red-600 lg:grid-cols-2">
+                <div class="container z-30 grid lg:col-span-full lg:row-start-1 lg:grid-cols-2">
+                    <div class="flex items-center xl:min-h-[500px]">
+                        <div class="max-w-xl space-y-6 bg-red-600 pb-12 pt-10 text-white lg:pr-10">
+                            <h2 class="text-5xl font-bold">About Visual Network Solutions</h2>
+                            <p>
+                                Visual Network Solutions believes every organization deserves technology that
+                                works for them and not against them. We are able to deliver
+                                superior service and tools because of our approach to IT
+                                services.
+                            </p>
+                            <a href="/about-us" class="btn-secondary">More About Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="parallax-zoom relative row-start-1 lg:col-start-2">
+                    <img src="/images/about-us.jpg" alt=""
+                        class="object-cover lg:absolute lg:inset-0 lg:!top-0 lg:h-full lg:max-w-none" />
+                </div>
+            </div>
+        </section>
+
+        <section x-data="{ open: false }" class="relative bg-white py-20">
+            <div class="container">
+                <!-- video thumbnail -->
+                <button @click="open = true" class="popform bg-red-600">
+                    <span class="block py-1 text-lg font-bold italic text-white md:text-3xl">&gt;&gt; Click to watch
+                        &lt;&lt;</span>
+                    <img src="/images/video-thumbnail.png" alt="" width="2190" height="1230" />
+                </button>
+                <button @click="open = true"
+                    class="font-source-sans-pro popform mx-auto mt-12 block rounded-lg bg-red-600 px-2 py-2 text-center text-3xl font-bold text-white shadow-2xl duration-200 hover:shadow-none md:px-8 lg:max-w-[515px] lg:text-5xl">
+                    Watch Free Training
+                    <span class="-mr-2 inline-flex items-center justify-center">
+                        Video
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="-mb-2 w-12 md:mb-0 md:w-20 lg:-mb-2">
+                            <path
+                                d="M7 17a1 1 0 0 1-.71-1.71L9.59 12l-3.3-3.29a1 1 0 0 1 1.42-1.42l4 4a1 1 0 0 1 0 1.41l-4 4A1 1 0 0 1 7 17Z" />
+                            <path
+                                d="M13 17a1 1 0 0 1-.71-1.71l3.3-3.29-3.3-3.29A1 1 0 0 1 13.7 7.3l4 4a1 1 0 0 1 0 1.41l-4 4a1 1 0 0 1-.7.29Z" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- form popup -->
+                <div x-transition="" x-show="open === true"
+                    class="fixed inset-0 z-90 flex items-center justify-center bg-zinc-950/70 p-2 md:p-5" x-cloak>
+                    <form @click.outside="open = false"
+                        class="relative flex w-full max-w-[720px] flex-col rounded-lg bg-white px-4 py-12 shadow-lg md:px-12">
+                        <h2 class="text-center text-[1.75rem] font-bold leading-tight">
+                            This is <em class="underline">Only</em> For Marketing Agencies,
+                            B2B Businesses, Consultants, and Client Based Businesses (We DO
+                            NOT work with&nbsp;beginners)
+                        </h2>
+                        <div class="mx-auto mt-8 space-y-4 md:max-w-[564px] lg:max-w-[515px]">
+                            <div class="space-y-2">
+                                <div>
+                                    <label for="name" class="sr-only">Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Name"
+                                        class="mt-2 w-full rounded-md border-0 py-3.5 ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-sky-400" />
+                                </div>
+                                <div>
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input id="email" name="email" type="email" placeholder="Email"
+                                        class="mt-2 w-full rounded-md border-0 py-3.5 ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-sky-400" />
+                                </div>
+                                <div>
+                                    <label for="phone" placeholder="Phone" class="sr-only">Phone</label>
+                                    <input type="tel" name="phone" id="phone" placeholder="Phone"
+                                        class="mt-2 w-full rounded-md border-0 py-3.5 ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-sky-400" />
+                                </div>
+                            </div>
+                            <button
+                                class="font-source-sans-pro mx-auto block rounded-lg bg-red-600 px-2 py-2 text-center text-3xl font-bold text-white shadow-2xl duration-200 hover:shadow-none md:px-8 lg:max-w-[515px] lg:text-5xl">
+                                Send Me The Free Training
+                                <span class="-mr-2 inline-flex items-center justify-center">
+                                    Video
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="-mb-2 w-12 md:mb-0 md:w-16 lg:-mb-2 lg:w-20">
+                                        <path
+                                            d="M7 17a1 1 0 0 1-.71-1.71L9.59 12l-3.3-3.29a1 1 0 0 1 1.42-1.42l4 4a1 1 0 0 1 0 1.41l-4 4A1 1 0 0 1 7 17Z" />
+                                        <path
+                                            d="M13 17a1 1 0 0 1-.71-1.71l3.3-3.29-3.3-3.29A1 1 0 0 1 13.7 7.3l4 4a1 1 0 0 1 0 1.41l-4 4a1 1 0 0 1-.7.29Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <footer class="text-xxs pt-10 text-center leading-snug">
+                                By opting in you are consenting for us to email, text, or call
+                                you.
+
+                                <br />
+                                You can opt out at any time. You information is never shared.
+                            </footer>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <article class="prose mx-auto mt-20">
+                <h3>
+                    Managed IT Support & IT Solutions In the Texas  Area You Can
+                    Trust
+                </h3>
+                <p>
+                    <strong><em>Visual Network Solutions</em> </strong> is a leading IT support company
+                    with office in San Antonio as well as Texas. We approach every client
+                    with proactive solutions for the computer issues you face today, and
+                    the IT challenges you’ll face tomorrow.
+                </p>
+                <p>
+                    Our team of experts and cutting-edge suite of IT support services
+                    make us the proven best choice for outsourcing your company’s
+                    network needs in Dallas. We will protect the integrity of your
+                    computers and networks with our data backup, disaster recovery and
+                    security measures. At the same time, our cloud computing and
+                    virtualization services will help drive the best performance from
+                    your resources. Partner with the IT experts.
+                </p>
+            </article>
+        </section>
+
+        <section class="container mt-20">
+            <h2 class="text-center text-5xl font-bold text-red-600">
+                Our Services
+            </h2>
+
+            <section class="mt-16 grid gap-8 md:grid-cols-2">
+                <article class="prose bg-white prose-h3:mt-0 prose-h3:text-left">
+                    <img src="/images/manage-it.jpg" alt="" />
+                    <div class="px-8 pb-10">
+                        <h3>Managed IT</h3>
+                        <p>Visual Network Solutions Is More Than Just A Managed IT Service Provider.</p>
+                        <a href="/managed-it.html" class="btn-primary">Read more</a>
+                    </div>
+                </article>
+                <article class="prose bg-white prose-h3:mt-0 prose-h3:text-left">
+                    <img src="/images/it-consulting.jpg" alt="" />
+                    <div class="px-8 pb-10">
+                        <h3>IT Consulting</h3>
+                        <p>
+                            Our IT consulting services keep you on track to achieve your
+                            business goals.
+                        </p>
+                        <a href="/it-consulting.html" class="btn-primary">Read more</a>
+                    </div>
+                </article>
+                <article class="prose bg-white prose-h3:mt-0 prose-h3:text-left">
+                    <img src="/images/office-relocation.jpg" alt="" />
+                    <div class="px-8 pb-10">
+                        <h3>Office Relocation</h3>
+                        <p>
+                            Moving to a new location can be a significant source of stress
+                            for many people, but it does not have to be.
+                        </p>
+                        <a href="/office-relocation.html" class="btn-primary">Read more</a>
+                    </div>
+                </article>
+                <article class="prose bg-white prose-h3:mt-0 prose-h3:text-left">
+                    <img src="/images/cybersecurity.jpg" alt="" />
+                    <div class="px-8 pb-10">
+                        <h3>CyberSecurity</h3>
+                        <p>
+                            Visual Network Solutions is a Managed Service Provider with Solutions for
+                            Cybersecurity with Webroot.
+                        </p>
+                        <a href="/cybersecurity.html" class="btn-primary">Read more</a>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <!-- calculator -->
+        <section id="calculator" class="mt-20 bg-gradient-to-b from-zinc-700 to-zinc-600 pb-24 pt-20 text-zinc-50">
+            <section class="container space-y-20">
+                <p class="border-b border-zinc-50 pb-2 text-sm uppercase">
+                    {{instruction}}
+                </p>
+
+                <!-- table 1 -->
+                <section class="border-b border-dashed">
+                    <h2 class="pb-7 text-3xl">{{headingone}}</h2>
+
+                    <div class="grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                        <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                            <div class="group relative inline-block" onclick="return true">
+                                <span
+                                    class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                <span
+                                    class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help1}}</span>
+                            </div>
+
+                            <p>{{q1}}</p>
+                        </div>
+                        <div class="flex items-center gap-x-2 pl-3 lg:col-span-full lg:col-start-7 lg:row-start-1">
+                            <p class="pretag flex-none">{{pretag1}}</p>
+                            <input type="number" min="0" v-model="accesshours" class="bg-zinc-500 focus:ring-sky-500" />
+                            <p class="posttag">{{posttag1}}</p>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                        <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                            <div class="group relative inline-block" onclick="return true">
+                                <span
+                                    class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                <span
+                                    class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help2}}</span>
+                            </div>
+
+                            <p>{{q2}}</p>
+                        </div>
+                        <div class="flex items-center gap-x-2 pl-3 lg:col-span-full lg:col-start-7 lg:row-start-1">
+                            <p class="pretag flex-none">{{pretag2}}</p>
+                            <input type="number" min="0" v-model="productiontime"
+                                class="bg-zinc-500 focus:ring-sky-500" />
+                            <p class="posttag">{{posttag2}}</p>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                        <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                            <div class="group relative inline-block" onclick="return true">
+                                <span
+                                    class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                <span
+                                    class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help3}}</span>
+                            </div>
+
+                            <p>{{q3}}</p>
+                        </div>
+                        <div class="flex items-center gap-x-2 pl-3 lg:col-span-full lg:col-start-7 lg:row-start-1">
+                            <p class="pretag flex-none">{{pretag3}}</p>
+                            <input type="number" min="0" v-model="datagb" class="bg-zinc-500 focus:ring-sky-500" />
+                            <p class="posttag">{{posttag3}}</p>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                        <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                            <div class="group relative inline-block" onclick="return true">
+                                <span
+                                    class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                <span
+                                    class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help4}}</span>
+                            </div>
+
+                            <p>{{q4}}</p>
+                        </div>
+                        <div
+                            class="flex flex-col gap-x-2 gap-y-4 pl-10 lg:col-span-full lg:col-start-7 lg:row-start-1 xl:grid xl:grid-cols-3 xl:items-center">
+                            <div class="col-span-2">
+                                <p class="pretag flex-none">{{pretag4}}</p>
+                                <!-- no pretag4 data, but this serves as spacing for the layout-->
+                                <div id="nobackuptime">
+                                    <div class="dual flex gap-x-2">
+                                        <div class="grid gap-y-1">
+                                            <label>{{hourstxt}}</label>
+                                            <input type="number" min="0" v-model.number="backuphrs"
+                                                class="w-full bg-zinc-500 focus:ring-sky-500" />
+                                        </div>
+                                        <div class="grid gap-y-1">
+                                            <label>{{minstxt}}</label>
+                                            <input type="number" min="0" v-model.number="backupmins"
+                                                class="w-full bg-zinc-500 focus:ring-sky-500" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nobkframe flex items-center gap-x-2 xl:pt-3.5">
+                                <input v-model="checked" id="nobackup" type="checkbox"
+                                    class="checked:border-sky-500 checked:text-sky-500 xl:-mt-3" />
+                                <label for="nobackup" class="text-sm leading-none">{{posttag4}}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- updated 06.20.2023 -->
+                    <div class="nobk grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                        <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                            <div class="group relative inline-block" onclick="return true">
+                                <span
+                                    class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                <span
+                                    class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help5}}</span>
+                            </div>
+
+                            <p>{{q5}}</p>
+                        </div>
+                        <div
+                            class="flex flex-col gap-x-2 gap-y-4 pl-10 lg:col-span-full lg:col-start-7 lg:row-start-1 xl:grid xl:grid-cols-3 xl:items-center">
+                            <div class="col-span-2">
+                                <p class="pretag flex-none">{{pretag5}}</p>
+                                <div id="nobackuptime">
+                                    <div class="dual flex gap-x-2">
+                                        <div class="grid gap-y-1">
+                                            <label>{{hourstxt}}</label>
+                                            <input type="number" min="0" v-model.number="recoveryhrs"
+                                                class="w-full bg-zinc-500 focus:ring-sky-500" />
+                                        </div>
+                                        <div class="grid gap-y-1">
+                                            <label>{{minstxt}}</label>
+                                            <input type="number" min="0" v-model.number="recoverymins"
+                                                class="w-full bg-zinc-500 focus:ring-sky-500" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / updated 06.20.2023 -->
+
+                    <div class="nobk grid border-t border-dashed py-7 lg:grid-cols-12 lg:gap-y-4">
+                        <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                            <div class="group relative inline-block" onclick="return true">
+                                <span
+                                    class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                <span
+                                    class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help6}}</span>
+                            </div>
+
+                            <p>{{q6}}</p>
+                        </div>
+                        <div
+                            class="flex flex-col gap-x-2 gap-y-4 pl-10 lg:col-span-full lg:col-start-7 lg:row-start-1 xl:items-center">
+                            <p class="pretag flex-none"></p>
+
+                            <div class="switch-field | flex w-full">
+                                <input type="radio" id="radio-one" name="recoverytype" v-model="recoverytype"
+                                    value="local" class="sr-only" checked />
+                                <label for="radio-one"
+                                    class="w-32 cursor-pointer rounded-l-md bg-zinc-500 px-4 py-2 text-center duration-200 focus:ring-sky-500 sm:w-49">{{pretag6}}</label>
+                                <input type="radio" id="radio-two" name="recoverytype" v-model="recoverytype"
+                                    value="cloud" class="sr-only" />
+                                <label for="radio-two"
+                                    class="-ml-px w-32 cursor-pointer rounded-r-md bg-zinc-500 px-4 py-2 text-center duration-200 focus:ring-sky-500 sm:w-49">{{posttag6}}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-if="recoverytype === 'cloud'"
+                        class="grid border-t border-dashed py-7 lg:grid-cols-12 lg:gap-y-4">
+                        <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                            <div class="group relative inline-block" onclick="return true">
+                                <span
+                                    class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                <span
+                                    class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help7}}</span>
+                            </div>
+
+                            <p>{{q7}}</p>
+                        </div>
+                        <div class="flex items-center gap-x-2 pl-3 lg:col-span-full lg:col-start-7 lg:row-start-1">
+                            <p class="pretag flex-none">{{pretag7}}</p>
+                            <input type="number" name="cloudspeed" v-model.number="cloudspeed"
+                                class="bg-zinc-500 focus:ring-sky-500" />
+                            <p class="posttag">{{posttag7}}</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- /table 1 -->
+
+                <!-- table 2 -->
+                <section class="border-b border-dashed">
+                    <h2 class="pb-7 text-3xl">{{headingtwo}}</h2>
+
+                    <div class="grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                        <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                            <div class="group relative inline-block" onclick="return true">
+                                <span
+                                    class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                <span
+                                    class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help8}}</span>
+                            </div>
+
+                            <p>{{q8}}</p>
+                        </div>
+                        <div class="flex items-center gap-x-2 pl-3 lg:col-span-full lg:col-start-7 lg:row-start-1">
+                            <p class="pretag flex-none">{{pretag8}}</p>
+                            <input type="number" min="0" v-model="staff" class="bg-zinc-500 focus:ring-sky-500" />
+                            <p class="posttag">{{posttag8}}</p>
+                        </div>
+                    </div>
+
+                    <div id="cost">
+                        <div class="grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                            <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                <div class="group relative inline-block" onclick="return true">
+                                    <span
+                                        class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                    <span
+                                        class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help9}}</span>
+                                </div>
+                                <p>{{q9}}</p>
+                            </div>
+                            <div class="flex items-center gap-x-2 pl-3 lg:col-span-full lg:col-start-7 lg:row-start-1">
+                                <p class="pretag flex-none">{{pretag9}}</p>
+                                <input type="number" min="0" v-model="staffwage"
+                                    class="bg-zinc-500 focus:ring-sky-500" />
+                                <p class="posttag">{{posttag9}}</p>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                            <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                <div class="group relative inline-block" onclick="return true">
+                                    <span
+                                        class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                    <span
+                                        class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help10}}</span>
+                                </div>
+                                <p>{{q10}}</p>
+                            </div>
+                            <div class="flex items-center gap-x-2 pl-3 lg:col-span-full lg:col-start-7 lg:row-start-1">
+                                <p class="pretag flex-none">{{pretag10}}</p>
+                                <input type="number" min="0" v-model="staffoverhead"
+                                    class="bg-zinc-500 focus:ring-sky-500" />
+                                <p class="posttag">{{posttag10}}</p>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-y-4 border-t border-dashed py-7 lg:grid-cols-12">
+                            <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                <div class="group relative inline-block" onclick="return true">
+                                    <span
+                                        class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                    <span
+                                        class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{help11}}</span>
+                                </div>
+                                <p>{{q11}}</p>
+                            </div>
+                            <div class="flex items-center gap-x-2 pl-3 lg:col-span-full lg:col-start-7 lg:row-start-1">
+                                <p class="pretag flex-none">{{pretag11}}</p>
+                                <input type="number" min="0" v-model="staffrevenue"
+                                    class="bg-zinc-500 focus:ring-sky-500" />
+                                <p class="posttag">{{posttag11}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cost -->
+                </section>
+                <!-- /table 2 -->
+
+                <!-- table 3 -->
+                <section>
+                    <h2 class="pb-7 text-3xl">{{headingthree}}</h2>
+
+                    <section class="grid bg-zinc-50 text-zinc-950 md:grid-cols-2">
+                        <!-- column 1 -->
+                        <div id="time" class="flex flex-col">
+                            <h4 id="currenttitle"
+                                class="bg-zinc-200 px-6 py-4 text-2xl font-bold text-zinc-600 sm:px-10">
+                                {{headingfour}}
+                            </h4>
+                            <div class="flex flex-1 flex-col gap-y-8 px-6 py-8 sm:px-10">
+                                <!-- time -->
+                                <div class="flex flex-col gap-y-2">
+                                    <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                        <div class="group relative inline-block" onclick="return true">
+                                            <span
+                                                class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                            <span
+                                                class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{cs1help}}</span>
+                                        </div>
+                                        <p class="text-zinc-500">{{cs1heading}}</p>
+                                    </div>
+                                    <div class="flex items-center gap-x-2 pl-10">
+                                        <h6 v-if="checked == ''" class="text-2xl">
+                                            {{backuphrs}}{{shorthourstxt}}
+                                            {{backupmins}}{{shortminstxt}}
+                                        </h6>
+                                        <h6 v-else-if="checked == 'false'" class="text-2xl">
+                                            {{backuphrs}}{{shorthourstxt}}
+                                            {{backupmins}}{{shortminstxt}}
+                                        </h6>
+                                        <h6 v-else class="text-2xl">{{cs1nobackup}}</h6>
+                                    </div>
+                                </div>
+                                <!-- /time -->
+
+                                <!-- recovery -->
+                                <div class="flex min-h-[120px] flex-col gap-y-2">
+                                    <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                        <div class="group relative inline-block" onclick="return true">
+                                            <span
+                                                class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                            <span
+                                                class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{cs2help}}</span>
+                                        </div>
+                                        <p class="text-zinc-500">{{cs2heading}}</p>
+                                    </div>
+                                    <div class="flex items-center gap-x-2 pl-10">
+                                        <div v-if="checked == ''" class="text-2xl">
+                                            <h6 v-if="recoverytype === 'local'">
+                                                {{localrecoveryDowntime}}
+                                            </h6>
+                                            <h6 v-else>{{cloudrecoveryDowntime}}</h6>
+                                        </div>
+                                        <div v-else-if="checked == 'false'" class="text-2xl">
+                                            <h6 v-if="recoverytype === 'local'">
+                                                {{localrecoveryDowntime}}
+                                            </h6>
+                                            <h6 v-else>{{cloudrecoveryDowntime}}</h6>
+                                        </div>
+                                        <h6 v-else class="text-2xl">{{cs1nobackup}}</h6>
+                                    </div>
+                                </div>
+                                <!-- /recovery -->
+
+                                <!-- summary -->
+                                <div class="flex flex-col gap-y-2">
+                                    <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                        <div class="group relative inline-block" onclick="return true">
+                                            <span
+                                                class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                            <span
+                                                class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{cs3help}}</span>
+                                        </div>
+                                        <p class="text-zinc-500">{{cs3heading}}</p>
+                                    </div>
+                                    <div class="flex flex-col gap-y-2 pl-10">
+                                        <div class="flex flex-col gap-y-2 border-y border-zinc-300 py-2">
+                                            <h6 v-if="checked == ''" class="text-sm text-zinc-400">
+                                                {{sum1}}
+                                                <br />
+                                                <strong v-if="recoverytype === 'local'" class="text-zinc-600">
+                                                    {{localrecoveryDowntime}} ({{localrecoverycost}})
+                                                </strong>
+                                                <strong v-else-if="recoverytype === 'cloud'" class="text-zinc-600">
+                                                    {{cloudrecoveryDowntime}} ({{cloudrecoverycost}})
+                                                </strong>
+                                            </h6>
+                                            <h6 v-else class="text-sm text-zinc-400">
+                                                {{sum1}}
+                                                <br />
+                                                <strong class="text-zinc-600">No Backup Taken</strong>
+                                            </h6>
+
+                                            <h6 v-if="responsetime === 'Critical'" class="text-sm text-zinc-400">
+                                                {{sum2}}
+                                                <br />
+                                                <strong class="text-zinc-600">
+                                                    {{recoveryhrs}} hrs {{recoverymins}} mins
+                                                </strong>
+
+                                                <strong>({{respondscost}})</strong>
+                                            </h6>
+                                            <h6 v-if="responsetime === 'Accept'" class="text-sm text-zinc-400">
+                                                {{sum2}} <br />
+                                                <strong class="text-zinc-600">
+                                                    {{recoveryhrs}} hrs {{recoverymins}} mins
+                                                </strong>
+
+                                                <strong>({{respondscost}})</strong>
+                                            </h6>
+                                        </div>
+
+                                        <h6 v-if="checked == ''" class="text-sm text-zinc-400">
+                                            {{sum3}}
+                                            <br />
+                                            <strong class="text-xl text-zinc-600" v-if="recoverytype === 'local'">
+                                                {{ displaylocalDowntime }}
+
+                                                <strong class="text-red-700">({{ localdowntimecost}})</strong>
+                                            </strong>
+                                            <strong class="text-xl text-zinc-600" v-else>
+                                                {{ displaycloudDowntime }}
+
+                                                <strong class="text-red-700">({{ clouddowntimecost }})</strong>
+                                            </strong>
+
+                                            <strong class="text-sm text-lime-700" v-else>
+                                                (-{{ cloudcostsaving }})
+                                            </strong>
+                                        </h6>
+                                        <h6 v-else class="text-sm text-zinc-400">
+                                            {{sum3}}
+                                            <br />
+
+                                            <strong class="text-xl text-red-700">{{sum4}}</strong>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <!-- /summary -->
+                            </div>
+                        </div>
+                        <!-- / column 1 -->
+
+                        <!-- column 2 -->
+                        <div id="money" class="flex flex-col bg-zinc-100">
+                            <h4 id="dattotitle" class="bg-sky-500 px-6 py-4 text-2xl font-bold text-white sm:px-10">
+                                {{headingfive}}
+                            </h4>
+                            <div class="flex flex-1 flex-col gap-y-8 px-6 py-8 sm:px-10">
+                                <!-- time -->
+                                <div class="flex flex-col gap-y-2">
+                                    <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                        <div class="group relative inline-block" onclick="return true">
+                                            <span
+                                                class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                            <span
+                                                class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{ds1help}}</span>
+                                        </div>
+                                        <p class="text-zinc-500">{{ds1heading}}</p>
+                                    </div>
+                                    <div class="flex items-center gap-x-2 pl-10">
+                                        <h6 class="text-2xl">{{bcdrbackup}} {{shortminstxt}}</h6>
+                                    </div>
+                                </div>
+                                <!-- /time -->
+
+                                <!-- recovery -->
+                                <div class="flex flex-col gap-y-2">
+                                    <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                        <div class="group relative inline-block" onclick="return true">
+                                            <span
+                                                class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                            <span
+                                                class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{ds2help}}</span>
+                                        </div>
+                                        <p class="text-zinc-500">{{ds2heading}}</p>
+                                    </div>
+                                    <div class="flex flex-col gap-y-2 pl-10">
+                                        <h6 class="text-2xl">
+                                            {{bcdrrecovery}} {{shortminstxt}}*
+                                        </h6>
+                                        <em class="text-xs text-zinc-600">{{ds2extra}}</em>
+                                    </div>
+                                </div>
+                                <!-- /recovery -->
+
+                                <!-- summary -->
+                                <div class="flex flex-col gap-y-2">
+                                    <div class="flex items-center gap-x-4 lg:col-span-6 lg:col-start-1 lg:row-start-1">
+                                        <div class="group relative inline-block" onclick="return true">
+                                            <span
+                                                class="grid h-6 w-6 place-content-center rounded-full bg-sky-500 text-white focus:visible">{{helpicon}}</span>
+                                            <span
+                                                class="invisible absolute left-0 top-8 z-10 block w-72 rounded-md bg-white px-4 py-3 text-sm text-zinc-800 shadow-md group-hover:visible group-focus:visible sm:w-80">{{ds3help}}</span>
+                                        </div>
+                                        <p class="text-zinc-500">{{ds3heading}}</p>
+                                    </div>
+                                    <div class="flex flex-col gap-y-2 pl-10">
+                                        <div class="flex flex-col gap-y-2 border-y border-zinc-300 py-2">
+                                            <h6 class="text-sm text-zinc-400">
+                                                {{sum1}}
+                                                <br />
+                                                <strong class="text-zinc-600">{{bcdrrecovery}} {{minstxt}}</strong>
+
+                                                <strong>({{dattorecoverycost}})</strong>
+                                            </h6>
+                                            <h6 class="text-sm text-zinc-400" v-if="responsetime === 'Critical'">
+                                                {{sum2}}
+                                                <br />
+                                                <strong class="text-zinc-600">
+                                                    {{recoveryhrs}} {{shorthourstxt}} {{recoverymins}}
+                                                    {{shortminstxt}}
+                                                </strong>
+                                                <strong>({{respondscost}})</strong>
+                                            </h6>
+                                            <h6 class="text-sm text-zinc-400" v-if="responsetime === 'Accept'">
+                                                {{sum2}}
+                                                <br />
+                                                <strong class="text-zinc-600">
+                                                    {{recoveryhrs}} {{shorthourstxt}} {{recoverymins}}
+                                                    {{shortminstxt}}
+                                                </strong>
+                                                <strong>({{respondscost}})</strong>
+                                            </h6>
+                                        </div>
+
+                                        <h6 class="text-sm text-zinc-400">
+                                            {{sum3}}
+                                            <br />
+                                            <strong class="text-xl text-zinc-600">{{displayBCDRDowntime}}</strong>
+                                            <strong>({{ bcdrdowntimecost }})</strong>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <!-- /summary -->
+                            </div>
+                        </div>
+                        <!-- / column 2 -->
+
+                        <div id="bottomline"
+                            class="col-span-full grid justify-items-center gap-y-2 border-t border-zinc-600 py-4 text-center">
+                            <p class="text-zinc-400">{{sum5}}</p>
+                            <div class="flex items-center">
+                                <span v-if="checked == ''">
+                                    <strong class="text-2xl font-bold text-lime-700" v-if="recoverytype === 'local'">
+                                        {{ localcostsaving }}
+                                    </strong>
+
+                                    <strong class="text-2xl font-bold text-lime-700" v-else>
+                                        {{ cloudcostsaving }}
+                                    </strong>
+                                </span>
+                                <span v-else></span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="pdfmain" class="results bg-white px-6 py-10 text-zinc-950 sm:px-10">
+                        <div class="space-y-6" id="results" class="PDFMain">
+                            <p class="text-sm text-zinc-400"><em>{{legal}}</em></p>
+
+                            <div v-if="checked == ''">
+                                <p v-html="results1"></p>
+                            </div>
+                            <div v-else-if="checked == 'false'">
+                                <p v-html="results1"></p>
+                            </div>
+                            <div v-else>
+                                <p v-html="results1else"></p>
+                            </div>
+                            <p v-html="resultstext2"></p>
+                            <p v-html="resultstext3"></p>
+                            <p>{{results1final}}</p>
+                        </div>
+                        <button class="btn-primary download-pdf mt-8">{{button2}}</button>
+                    </div>
+                </section>
+                <!-- /table 3 -->
+
+                <!-- this section is also hidden in the original -->
+                <div id="rtodatatxt" class="hidden">
+                    <p>
+                        Requested BCDR Demo from RTO Calculator. Inputs were as follows:
+                        Backup occurrence = {{ backuphrs }} hrs {{ backupmins }} mins,
+                        Recovery initiation time = {{ recoveryhrs }} hrs {{ recoverymins
+                        }} mins , Recovery Method = {{recoverytype}}, Cloudspeed =
+                        {{cloudspeed}}Mbps, Data = {{datagb}}GB, Staff = {{staff}},
+                        overhead = {{currencyicon}}{{staffoverhead}}, Annual Revenue =
+                        {{currencyicon}}{{staffrevenue}}, Results: Current Solution: Time
+                        between backups {{backuphrs}}hrs {{backupmins}}mins, Recovery
+                        Processing Time: Local = {{localrecoveryDowntime}} / Cloud =
+                        {{cloudrecoveryDowntime}}, Minimum Downtime: Local = {{
+                        displaylocalDowntime }} / Cloud = {{ displaycloudDowntime }}
+                    </p>
+                </div>
+                <!-- /this section is also hidden in the original -->
+            </section>
+
+            <!-- form PDF popup -->
+            <div id="formframe2" class="fixed inset-0 z-70 bg-zinc-950/70"></div>
+            <div id="form2" class="fixed inset-0 z-90 place-content-center">
+                <div class="w-full max-w-none rounded-lg bg-zinc-100 px-6 py-8 shadow-lg md:px-8">
+                    <h5 class="text-center text-3xl font-bold text-zinc-950">
+                        {{form2title}}
+                    </h5>
+                    <form id="mktoForm_31777" class="mt-8 !w-auto"></form>
+                </div>
+            </div>
+
+            <!-- /form PDF popup -->
+        </section>
+        <!-- /calculator -->
+    </main>
+
+    <footer class="relative z-20 border-t border-zinc-100 bg-white py-12 text-sm">
+        <div class="container grid gap-x-4 gap-y-8 sm:gap-x-8 lg:flex lg:justify-between">
+            <section class="col-span-full row-start-1 flex flex-col items-start gap-y-4 sm:col-span-1">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="Red Coat" class="w-48" />
+                </a>
+                <small class="text-sm">&copy; 2023 by Visual Network Solutions</small>
+            </section>
+
+            <section class="col-span-full row-start-2 space-y-4 sm:col-span-1 sm:row-start-1">
+                <h5>CONTACT</h5>
+                <address class="not-italic">
+                    <ul class="space-y-1">
+                        <li>Phone: <a href="tel:+ (210) 233-9880"> (210) 233-9880</a></li>
+                        <li>
+                            Email:
+                            <a href="mailto: vnssupport@visolutions.net"> vnssupport@visolutions.net</a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+
+            <section class="col-start-1 row-start-3 space-y-4 sm:row-start-2">
+                <h5>WORKING HOURS</h5>
+                <ul class="space-y-1">
+                    <li>Mon - Fri: 8am - 8pm</li>
+                    <li>Saturday: 9am - 7pm</li>
+                    <li>Sunday: 9am - 5pm</li>
+                </ul>
+
+                <ul class="space-y-1">
+                    <li>NOC</li>
+                    <li>24 Hours</li>
+                </ul>
+            </section>
+
+            <section class="col-start-2 row-start-3 space-y-4 sm:row-start-2">
+                <h5>RESOURCES</h5>
+                <ul class="space-y-1">
+                    <li><a href="/contact-us.html">Locations</a></li>
+                    <li><a href="/tips.html">Tips</a></li>
+                    <li><a href="/faqs.html">FAQs</a></li>
+                    <li><a href="/privacy-terms.html">Privacy & Terms</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+
+    <!-- parallax-zoom  -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            $(".parallax-zoom img").css({
+                width: 100 + scroll / 40 + "%",
+                top: -(scroll / 30) + "%",
+            });
+        });
+    </script>
+
+    <!-- calculator -->
+    <script src="/js/vue.min.js"></script>
+    <script src="/js/mainec88.js"></script>
+    <script src="/js/validator-standalone.js"></script>
+    <script src="https://info.kaseya.com/js/forms2/js/forms2.min.js"></script>
+</body>
+
+</html>
